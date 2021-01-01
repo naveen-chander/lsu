@@ -80,6 +80,9 @@ signal base_addr    	: 	STD_LOGIC_VECTOR(31 downto 0);
 signal adder_a         	: 	STD_LOGIC_VECTOR(31 downto 0);
 signal adder_b         	: 	STD_LOGIC_VECTOR(31 downto 0);
 signal D_DIN         	: 	STD_LOGIC_VECTOR(31 downto 0);
+signal count32         	: 	STD_LOGIC_VECTOR(31 downto 0);
+signal DMEM_offset     	: 	STD_LOGIC_VECTOR(31 downto 0);
+signal DMEM_offset64    : 	STD_LOGIC_VECTOR(63 downto 0);
 signal EEW              :   STD_LOGIC_VECTOR(1 downto 0);
 
 begin
@@ -176,61 +179,37 @@ end process terminate_gen;
 done <= terminate;
 
 ------------------------------------------------------------------------------------------------
---addr_gen : process(count,RS1,RS2,V_OFFSET)
------------------------adder_b Generation-------------------
-
-vec_offset1 <= x"00000004"       when mop = "00" else
-               (others => '0')   when mop = "01" else
-               RS2               when mop = "10" else
-               V_OFFSET;
-
-vec_offset  <= vec_offset1  when (count /=x"00" and  mask='1') else
-               (others=>'0') ;
- 
-adder_b     <= vec_offset   when S_VECn = '0'   else
-               IMM ;
------------------------adder_a Generation-------------------
-base_addr   <= RS1  when S_VECn = '1'   else
-               ADDER_OUT(31 downto 0);
-
-adder_a     <= base_addr    when (count /= x"00")   else
-               RS1;    
-               
-D_DIN <= RS2 when (S_VECn = '1') else
-         V_DATA_WR;
-dmem_addr_gen : process(clk,reset)
+dmem_offset_gen : process(mask,count,RS2,V_OFFSET,IMM,S_VECn,RS1,MOP)
 begin
-    if(reset = '1') then
-        ADDER_OUT    <= (others=>'0');
-
-        ENA          <= '0';
-        WE           <= '0';
-        OE           <= '0';
-    elsif(rising_edge(clk)) then
-        ADDER_OUT <= ('0' & adder_a ) + (adder_b(31) & adder_b);
-        ENA          <= D_CS;
-        WE           <= D_WE;
-        OE           <= D_RE;
-
-    end if;
+	if(S_VECn	=	'1')	then
+	   if(IMM(31) = '1') then  
+	       DMEM_offset64	<=x"FFFFFFFF"&IMM;
+	   else
+	       DMEM_offset64 <= x"00000000"&IMM;
+	   end if;
+	elsif(Mask = '0') then	
+		DMEM_offset64	<=	(others=>'0');
+	else
+		case (MOP) is	
+			when "00"	=>	--Unit Stride Access
+				DMEM_offset64	<= x"00000000000000"& std_logic_vector(shift_left(unsigned(count),2));
+			when "10"	=>	--Strided Access.
+				DMEM_offset64	<= RS2*count32;
+			when "11"	=>	--Strided Access
+				DMEM_offset64	<= V_OFFSET*count32;
+			when others=>
+				DMEM_offset64	<=	(others=>'0');
+		end case;
+	end if;
 end process;
-
-DADDR <= ADDER_OUT(12 downto 2);                            
---variable ADDR_offset : signed(31 downto 0) := (others=>'0');
---begin
---	case(I_TYPE) is
---		when "00"	=>	-- Scalar Case
---			ADDR_offset	:=	(others=>'0');	
---		when "01"	=>	-- Vector Unit Stride
---			ADDR_offset	:=	ADDR_offset + 4;
---		when "10"	=>	--Vector Strided
---			ADDR_offset	:=	ADDR_offset + signed(RS2);
---		when others	=>	--Vector Indexed Case
---			ADDR_offset	:=	ADDR_offset + signed(V_OFFSET);
---	end case;
---		DADDR <= ('0' & RS1) + std_logic_vector((ADDR_offset(31) & ADDR_offset));
---end process;
-
-------------------------------------------------------------------------------------------------
+DMEM_Offset <= DMEM_offset64(31 downto 0);
+ADDER_OUT	 <=	('0'&RS1) + (DMEM_offset(31)&DMEM_offset);
+count32		 <= x"000000"&count;	
+DADDR 	     <= ADDER_OUT(12 downto 2);
+ENA          <= D_CS;
+WE           <= D_WE;  
+OE           <= D_RE;   
+D_DIN		 <= RS2 when (S_VECn = '1') else
+				V_DATA_WR;                        
 
 end Behavioral;
