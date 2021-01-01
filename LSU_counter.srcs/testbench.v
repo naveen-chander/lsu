@@ -41,7 +41,7 @@ output [31:0] DATA_RD       );
 
 
 endmodule
-
+///////////////Change/////////////////////////
 lsu lsu_vhd(
 	.clk 		(clk 		),		
 	.reset 		(reset 		),
