@@ -1,0 +1,10 @@
+0.7
+2020.1
+May 27 2020
+20:09:33
+C:/Users/mghnv/drive/Documents/MtechProject/LSU_counter/LSU_counter.sim/sim_1/behav/xsim/glbl.v,1590624368,verilog,,,,glbl,,,,,,,,
+C:/Users/mghnv/drive/Documents/MtechProject/LSU_counter/LSU_counter.srcs/sim_1/imports/new/vec_regfile.vhd,1608329861,vhdl,,,,vec_regfile,,,,,,,,
+C:/Users/mghnv/drive/Documents/MtechProject/LSU_counter/LSU_counter.srcs/sim_1/new/regfile.v,1608149409,verilog,,C:/Users/mghnv/drive/Documents/MtechProject/LSU_counter/LSU_counter.srcs/sim_1/new/testbench.v,,regfile,,,,,,,,
+C:/Users/mghnv/drive/Documents/MtechProject/LSU_counter/LSU_counter.srcs/sim_1/new/testbench.v,1608410291,verilog,,,,testbench,,,,,,,,
+C:/Users/mghnv/drive/Documents/MtechProject/LSU_counter/LSU_counter.srcs/sources_1/new/lsu.vhd,1608409201,vhdl,,,,lsu,,,,,,,,
+C:/Users/mghnv/drive/Documents/MtechProject/LSU_counter/LSU_counter.srcs/sources_1/new/lsu_wrapper.v,1608147431,verilog,,C:/Users/mghnv/drive/Documents/MtechProject/LSU_counter/LSU_counter.srcs/sim_1/new/regfile.v,,lsu_wrapper,,,,,,,,

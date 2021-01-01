@@ -1,0 +1,1 @@
+DMEM_sim_netlist.vhdl,vhdl,xil_defaultlib,../../../../LSU_counter.srcs/sources_1/ip/DMEM_1/DMEM_sim_netlist.vhdl,

@@ -1,0 +1,8 @@
+# compile vhdl design source files
+vhdl xil_defaultlib  \
+"c:/Users/mghnv/drive/Documents/MtechProject/LSU_counter/LSU_counter.srcs/sources_1/ip/DMEM_1/DMEM_sim_netlist.vhdl" \
+"../../../../LSU_counter.srcs/sources_1/new/lsu.vhd" \
+"../../../../LSU_counter.srcs/sim_1/imports/new/vec_regfile.vhd" \
+
+# Do not sort compile order
+nosort

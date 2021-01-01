@@ -1,0 +1,1393 @@
+Copyright 1986-2020 Xilinx, Inc. All Rights Reserved.
+--------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
+| Tool Version : Vivado v.2020.1 (win64) Build 2902540 Wed May 27 19:54:49 MDT 2020
+| Date         : Sat Dec 26 00:45:07 2020
+| Host         : DESKTOP-R79JGP0 running 64-bit major release  (build 9200)
+| Command      : report_timing_summary -max_paths 10 -file lsu_wrapper_timing_summary_routed.rpt -pb lsu_wrapper_timing_summary_routed.pb -rpx lsu_wrapper_timing_summary_routed.rpx -warn_on_violation
+| Design       : lsu_wrapper
+| Device       : 7vx485t-ffg1157
+| Speed File   : -1  PRODUCTION 1.12 2014-09-11
+--------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
+
+Timing Summary Report
+
+------------------------------------------------------------------------------------------------
+| Timer Settings
+| --------------
+------------------------------------------------------------------------------------------------
+
+  Enable Multi Corner Analysis               :  Yes
+  Enable Pessimism Removal                   :  Yes
+  Pessimism Removal Resolution               :  Nearest Common Node
+  Enable Input Delay Default Clock           :  No
+  Enable Preset / Clear Arcs                 :  No
+  Disable Flight Delays                      :  No
+  Ignore I/O Paths                           :  No
+  Timing Early Launch at Borrowing Latches   :  No
+  Borrow Time for Max Delay Exceptions       :  Yes
+  Merge Timing Exceptions                    :  Yes
+
+  Corner  Analyze    Analyze    
+  Name    Max Paths  Min Paths  
+  ------  ---------  ---------  
+  Slow    Yes        Yes        
+  Fast    Yes        Yes        
+
+
+
+check_timing report
+
+Table of Contents
+-----------------
+1. checking no_clock (0)
+2. checking constant_clock (0)
+3. checking pulse_width_clock (0)
+4. checking unconstrained_internal_endpoints (0)
+5. checking no_input_delay (119)
+6. checking no_output_delay (33)
+7. checking multiple_clock (0)
+8. checking generated_clocks (0)
+9. checking loops (0)
+10. checking partial_input_delay (0)
+11. checking partial_output_delay (0)
+12. checking latch_loops (0)
+
+1. checking no_clock (0)
+------------------------
+ There are 0 register/latch pins with no clock.
+
+
+2. checking constant_clock (0)
+------------------------------
+ There are 0 register/latch pins with constant_clock.
+
+
+3. checking pulse_width_clock (0)
+---------------------------------
+ There are 0 register/latch pins which need pulse_width check
+
+
+4. checking unconstrained_internal_endpoints (0)
+------------------------------------------------
+ There are 0 pins that are not constrained for maximum delay.
+
+ There are 0 pins that are not constrained for maximum delay due to constant clock.
+
+
+5. checking no_input_delay (119)
+--------------------------------
+ There are 119 input ports with no input delay specified. (HIGH)
+
+ There are 0 input ports with no input delay but user has a false path constraint.
+
+
+6. checking no_output_delay (33)
+--------------------------------
+ There are 33 ports with no output delay specified. (HIGH)
+
+ There are 0 ports with no output delay but user has a false path constraint
+
+ There are 0 ports with no output delay but with a timing clock defined on it or propagating through it
+
+
+7. checking multiple_clock (0)
+------------------------------
+ There are 0 register/latch pins with multiple clocks.
+
+
+8. checking generated_clocks (0)
+--------------------------------
+ There are 0 generated clocks that are not connected to a clock source.
+
+
+9. checking loops (0)
+---------------------
+ There are 0 combinational loops in the design.
+
+
+10. checking partial_input_delay (0)
+------------------------------------
+ There are 0 input ports with partial input delay specified.
+
+
+11. checking partial_output_delay (0)
+-------------------------------------
+ There are 0 ports with partial output delay specified.
+
+
+12. checking latch_loops (0)
+----------------------------
+ There are 0 combinational latch loops in the design through latch input
+
+
+
+------------------------------------------------------------------------------------------------
+| Design Timing Summary
+| ---------------------
+------------------------------------------------------------------------------------------------
+
+    WNS(ns)      TNS(ns)  TNS Failing Endpoints  TNS Total Endpoints      WHS(ns)      THS(ns)  THS Failing Endpoints  THS Total Endpoints     WPWS(ns)     TPWS(ns)  TPWS Failing Endpoints  TPWS Total Endpoints  
+    -------      -------  ---------------------  -------------------      -------      -------  ---------------------  -------------------     --------     --------  ----------------------  --------------------  
+      6.171        0.000                      0                   73        0.143        0.000                      0                   73        4.650        0.000                       0                    29  
+
+
+All user specified timing constraints are met.
+
+
+------------------------------------------------------------------------------------------------
+| Clock Summary
+| -------------
+------------------------------------------------------------------------------------------------
+
+Clock  Waveform(ns)       Period(ns)      Frequency(MHz)
+-----  ------------       ----------      --------------
+clk_1  {0.000 5.000}      10.000          100.000         
+
+
+------------------------------------------------------------------------------------------------
+| Intra Clock Table
+| -----------------
+------------------------------------------------------------------------------------------------
+
+Clock             WNS(ns)      TNS(ns)  TNS Failing Endpoints  TNS Total Endpoints      WHS(ns)      THS(ns)  THS Failing Endpoints  THS Total Endpoints     WPWS(ns)     TPWS(ns)  TPWS Failing Endpoints  TPWS Total Endpoints  
+-----             -------      -------  ---------------------  -------------------      -------      -------  ---------------------  -------------------     --------     --------  ----------------------  --------------------  
+clk_1               6.171        0.000                      0                   73        0.143        0.000                      0                   73        4.650        0.000                       0                    29  
+
+
+------------------------------------------------------------------------------------------------
+| Inter Clock Table
+| -----------------
+------------------------------------------------------------------------------------------------
+
+From Clock    To Clock          WNS(ns)      TNS(ns)  TNS Failing Endpoints  TNS Total Endpoints      WHS(ns)      THS(ns)  THS Failing Endpoints  THS Total Endpoints  
+----------    --------          -------      -------  ---------------------  -------------------      -------      -------  ---------------------  -------------------  
+
+
+------------------------------------------------------------------------------------------------
+| Other Path Groups Table
+| -----------------------
+------------------------------------------------------------------------------------------------
+
+Path Group    From Clock    To Clock          WNS(ns)      TNS(ns)  TNS Failing Endpoints  TNS Total Endpoints      WHS(ns)      THS(ns)  THS Failing Endpoints  THS Total Endpoints  
+----------    ----------    --------          -------      -------  ---------------------  -------------------      -------      -------  ---------------------  -------------------  
+
+
+------------------------------------------------------------------------------------------------
+| Timing Details
+| --------------
+------------------------------------------------------------------------------------------------
+
+
+---------------------------------------------------------------------------------------------------
+From Clock:  clk_1
+  To Clock:  clk_1
+
+Setup :            0  Failing Endpoints,  Worst Slack        6.171ns,  Total Violation        0.000ns
+Hold  :            0  Failing Endpoints,  Worst Slack        0.143ns,  Total Violation        0.000ns
+PW    :            0  Failing Endpoints,  Worst Slack        4.650ns,  Total Violation        0.000ns
+---------------------------------------------------------------------------------------------------
+
+
+Max Delay Paths
+--------------------------------------------------------------------------------------
+Slack (MET) :             6.171ns  (required time - arrival time)
+  Source:                 lsu_vhd/count_reg[0]/C
+                            (rising edge-triggered cell FDCE clocked by clk_1  {rise@0.000ns fall@5.000ns period=10.000ns})
+  Destination:            lsu_vhd/ADDER_OUT_reg[9]/D
+                            (rising edge-triggered cell FDCE clocked by clk_1  {rise@0.000ns fall@5.000ns period=10.000ns})
+  Path Group:             clk_1
+  Path Type:              Setup (Max at Slow Process Corner)
+  Requirement:            10.000ns  (clk_1 rise@10.000ns - clk_1 rise@0.000ns)
+  Data Path Delay:        3.828ns  (logic 0.968ns (25.284%)  route 2.860ns (74.716%))
+  Logic Levels:           6  (CARRY4=2 LUT3=1 LUT4=1 LUT6=2)
+  Clock Path Skew:        -0.016ns (DCD - SCD + CPR)
+    Destination Clock Delay (DCD):    4.845ns = ( 14.845 - 10.000 ) 
+    Source Clock Delay      (SCD):    5.199ns
+    Clock Pessimism Removal (CPR):    0.338ns
+  Clock Uncertainty:      0.035ns  ((TSJ^2 + TIJ^2)^1/2 + DJ) / 2 + PE
+    Total System Jitter     (TSJ):    0.071ns
+    Total Input Jitter      (TIJ):    0.000ns
+    Discrete Jitter          (DJ):    0.000ns
+    Phase Error              (PE):    0.000ns
+
+    Location             Delay type                Incr(ns)  Path(ns)    Netlist Resource(s)
+  -------------------------------------------------------------------    -------------------
+                         (clock clk_1 rise edge)      0.000     0.000 r  
+    AL31                                              0.000     0.000 r  clk (IN)
+                         net (fo=0)                   0.000     0.000    clk
+    AL31                 IBUF (Prop_ibuf_I_O)         0.765     0.765 r  clk_IBUF_inst/O
+                         net (fo=1, routed)           2.586     3.351    clk_IBUF
+    BUFGCTRL_X0Y0        BUFG (Prop_bufg_I_O)         0.120     3.471 r  clk_IBUF_BUFG_inst/O
+                         net (fo=28, routed)          1.728     5.199    lsu_vhd/clk
+    SLICE_X46Y126        FDCE                                         r  lsu_vhd/count_reg[0]/C
+  -------------------------------------------------------------------    -------------------
+    SLICE_X46Y126        FDCE (Prop_fdce_C_Q)         0.308     5.507 f  lsu_vhd/count_reg[0]/Q
+                         net (fo=9, routed)           0.909     6.416    lsu_vhd/count_reg[0]
+    SLICE_X44Y126        LUT4 (Prop_lut4_I1_O)        0.053     6.469 f  lsu_vhd/plusOp_carry_i_17/O
+                         net (fo=2, routed)           0.419     6.888    lsu_vhd/plusOp_carry_i_17_n_0
+    SLICE_X44Y127        LUT6 (Prop_lut6_I1_O)        0.053     6.941 r  lsu_vhd/plusOp_carry_i_9/O
+                         net (fo=13, routed)          0.957     7.899    lsu_vhd/plusOp_carry_i_9_n_0
+    SLICE_X44Y129        LUT3 (Prop_lut3_I1_O)        0.053     7.952 r  lsu_vhd/plusOp_carry__0_i_2/O
+                         net (fo=2, routed)           0.575     8.526    lsu_vhd/L[6]
+    SLICE_X45Y127        LUT6 (Prop_lut6_I0_O)        0.053     8.579 r  lsu_vhd/plusOp_carry__0_i_6/O
+                         net (fo=1, routed)           0.000     8.579    lsu_vhd/plusOp_carry__0_i_6_n_0
+    SLICE_X45Y127        CARRY4 (Prop_carry4_S[2]_CO[3])
+                                                      0.235     8.814 r  lsu_vhd/plusOp_carry__0/CO[3]
+                         net (fo=1, routed)           0.000     8.814    lsu_vhd/plusOp_carry__0_n_0
+    SLICE_X45Y128        CARRY4 (Prop_carry4_CI_O[1])
+                                                      0.213     9.027 r  lsu_vhd/plusOp_carry__1/O[1]
+                         net (fo=1, routed)           0.000     9.027    lsu_vhd/plusOp[9]
+    SLICE_X45Y128        FDCE                                         r  lsu_vhd/ADDER_OUT_reg[9]/D
+  -------------------------------------------------------------------    -------------------
+
+                         (clock clk_1 rise edge)     10.000    10.000 r  
+    AL31                                              0.000    10.000 r  clk (IN)
+                         net (fo=0)                   0.000    10.000    clk
+    AL31                 IBUF (Prop_ibuf_I_O)         0.639    10.639 r  clk_IBUF_inst/O
+                         net (fo=1, routed)           2.469    13.108    clk_IBUF
+    BUFGCTRL_X0Y0        BUFG (Prop_bufg_I_O)         0.113    13.221 r  clk_IBUF_BUFG_inst/O
+                         net (fo=28, routed)          1.624    14.845    lsu_vhd/clk
+    SLICE_X45Y128        FDCE                                         r  lsu_vhd/ADDER_OUT_reg[9]/C
+                         clock pessimism              0.338    15.183    
+                         clock uncertainty           -0.035    15.147    
+    SLICE_X45Y128        FDCE (Setup_fdce_C_D)        0.051    15.198    lsu_vhd/ADDER_OUT_reg[9]
+  -------------------------------------------------------------------
+                         required time                         15.198    
+                         arrival time                          -9.027    
+  -------------------------------------------------------------------
+                         slack                                  6.171    
+
+Slack (MET) :             6.188ns  (required time - arrival time)
+  Source:                 lsu_vhd/count_reg[0]/C
+                            (rising edge-triggered cell FDCE clocked by clk_1  {rise@0.000ns fall@5.000ns period=10.000ns})
+  Destination:            lsu_vhd/ADDER_OUT_reg[12]/D
+                            (rising edge-triggered cell FDCE clocked by clk_1  {rise@0.000ns fall@5.000ns period=10.000ns})
+  Path Group:             clk_1
+  Path Type:              Setup (Max at Slow Process Corner)
+  Requirement:            10.000ns  (clk_1 rise@10.000ns - clk_1 rise@0.000ns)
+  Data Path Delay:        3.812ns  (logic 0.952ns (24.971%)  route 2.860ns (75.030%))
+  Logic Levels:           7  (CARRY4=3 LUT3=1 LUT4=1 LUT6=2)
+  Clock Path Skew:        -0.015ns (DCD - SCD + CPR)
+    Destination Clock Delay (DCD):    4.846ns = ( 14.846 - 10.000 ) 
+    Source Clock Delay      (SCD):    5.199ns
+    Clock Pessimism Removal (CPR):    0.338ns
+  Clock Uncertainty:      0.035ns  ((TSJ^2 + TIJ^2)^1/2 + DJ) / 2 + PE
+    Total System Jitter     (TSJ):    0.071ns
+    Total Input Jitter      (TIJ):    0.000ns
+    Discrete Jitter          (DJ):    0.000ns
+    Phase Error              (PE):    0.000ns
+
+    Location             Delay type                Incr(ns)  Path(ns)    Netlist Resource(s)
+  -------------------------------------------------------------------    -------------------
+                         (clock clk_1 rise edge)      0.000     0.000 r  
+    AL31                                              0.000     0.000 r  clk (IN)
+                         net (fo=0)                   0.000     0.000    clk
+    AL31                 IBUF (Prop_ibuf_I_O)         0.765     0.765 r  clk_IBUF_inst/O
+                         net (fo=1, routed)           2.586     3.351    clk_IBUF
+    BUFGCTRL_X0Y0        BUFG (Prop_bufg_I_O)         0.120     3.471 r  clk_IBUF_BUFG_inst/O
+                         net (fo=28, routed)          1.728     5.199    lsu_vhd/clk
+    SLICE_X46Y126        FDCE                                         r  lsu_vhd/count_reg[0]/C
+  -------------------------------------------------------------------    -------------------
+    SLICE_X46Y126        FDCE (Prop_fdce_C_Q)         0.308     5.507 f  lsu_vhd/count_reg[0]/Q
+                         net (fo=9, routed)           0.909     6.416    lsu_vhd/count_reg[0]
+    SLICE_X44Y126        LUT4 (Prop_lut4_I1_O)        0.053     6.469 f  lsu_vhd/plusOp_carry_i_17/O
+                         net (fo=2, routed)           0.419     6.888    lsu_vhd/plusOp_carry_i_17_n_0
+    SLICE_X44Y127        LUT6 (Prop_lut6_I1_O)        0.053     6.941 r  lsu_vhd/plusOp_carry_i_9/O
+                         net (fo=13, routed)          0.957     7.899    lsu_vhd/plusOp_carry_i_9_n_0
+    SLICE_X44Y129        LUT3 (Prop_lut3_I1_O)        0.053     7.952 r  lsu_vhd/plusOp_carry__0_i_2/O
+                         net (fo=2, routed)           0.575     8.526    lsu_vhd/L[6]
+    SLICE_X45Y127        LUT6 (Prop_lut6_I0_O)        0.053     8.579 r  lsu_vhd/plusOp_carry__0_i_6/O
+                         net (fo=1, routed)           0.000     8.579    lsu_vhd/plusOp_carry__0_i_6_n_0
+    SLICE_X45Y127        CARRY4 (Prop_carry4_S[2]_CO[3])
+                                                      0.235     8.814 r  lsu_vhd/plusOp_carry__0/CO[3]
+                         net (fo=1, routed)           0.000     8.814    lsu_vhd/plusOp_carry__0_n_0
+    SLICE_X45Y128        CARRY4 (Prop_carry4_CI_CO[3])
+                                                      0.058     8.872 r  lsu_vhd/plusOp_carry__1/CO[3]
+                         net (fo=1, routed)           0.000     8.872    lsu_vhd/plusOp_carry__1_n_0
+    SLICE_X45Y129        CARRY4 (Prop_carry4_CI_O[0])
+                                                      0.139     9.011 r  lsu_vhd/plusOp_carry__2/O[0]
+                         net (fo=1, routed)           0.000     9.011    lsu_vhd/plusOp[12]
+    SLICE_X45Y129        FDCE                                         r  lsu_vhd/ADDER_OUT_reg[12]/D
+  -------------------------------------------------------------------    -------------------
+
+                         (clock clk_1 rise edge)     10.000    10.000 r  
+    AL31                                              0.000    10.000 r  clk (IN)
+                         net (fo=0)                   0.000    10.000    clk
+    AL31                 IBUF (Prop_ibuf_I_O)         0.639    10.639 r  clk_IBUF_inst/O
+                         net (fo=1, routed)           2.469    13.108    clk_IBUF
+    BUFGCTRL_X0Y0        BUFG (Prop_bufg_I_O)         0.113    13.221 r  clk_IBUF_BUFG_inst/O
+                         net (fo=28, routed)          1.625    14.846    lsu_vhd/clk
+    SLICE_X45Y129        FDCE                                         r  lsu_vhd/ADDER_OUT_reg[12]/C
+                         clock pessimism              0.338    15.184    
+                         clock uncertainty           -0.035    15.148    
+    SLICE_X45Y129        FDCE (Setup_fdce_C_D)        0.051    15.199    lsu_vhd/ADDER_OUT_reg[12]
+  -------------------------------------------------------------------
+                         required time                         15.199    
+                         arrival time                          -9.011    
+  -------------------------------------------------------------------
+                         slack                                  6.188    
+
+Slack (MET) :             6.205ns  (required time - arrival time)
+  Source:                 lsu_vhd/count_reg[0]/C
+                            (rising edge-triggered cell FDCE clocked by clk_1  {rise@0.000ns fall@5.000ns period=10.000ns})
+  Destination:            lsu_vhd/ADDER_OUT_reg[11]/D
+                            (rising edge-triggered cell FDCE clocked by clk_1  {rise@0.000ns fall@5.000ns period=10.000ns})
+  Path Group:             clk_1
+  Path Type:              Setup (Max at Slow Process Corner)
+  Requirement:            10.000ns  (clk_1 rise@10.000ns - clk_1 rise@0.000ns)
+  Data Path Delay:        3.794ns  (logic 0.934ns (24.615%)  route 2.860ns (75.385%))
+  Logic Levels:           6  (CARRY4=2 LUT3=1 LUT4=1 LUT6=2)
+  Clock Path Skew:        -0.016ns (DCD - SCD + CPR)
+    Destination Clock Delay (DCD):    4.845ns = ( 14.845 - 10.000 ) 
+    Source Clock Delay      (SCD):    5.199ns
+    Clock Pessimism Removal (CPR):    0.338ns
+  Clock Uncertainty:      0.035ns  ((TSJ^2 + TIJ^2)^1/2 + DJ) / 2 + PE
+    Total System Jitter     (TSJ):    0.071ns
+    Total Input Jitter      (TIJ):    0.000ns
+    Discrete Jitter          (DJ):    0.000ns
+    Phase Error              (PE):    0.000ns
+
+    Location             Delay type                Incr(ns)  Path(ns)    Netlist Resource(s)
+  -------------------------------------------------------------------    -------------------
+                         (clock clk_1 rise edge)      0.000     0.000 r  
+    AL31                                              0.000     0.000 r  clk (IN)
+                         net (fo=0)                   0.000     0.000    clk
+    AL31                 IBUF (Prop_ibuf_I_O)         0.765     0.765 r  clk_IBUF_inst/O
+                         net (fo=1, routed)           2.586     3.351    clk_IBUF
+    BUFGCTRL_X0Y0        BUFG (Prop_bufg_I_O)         0.120     3.471 r  clk_IBUF_BUFG_inst/O
+                         net (fo=28, routed)          1.728     5.199    lsu_vhd/clk
+    SLICE_X46Y126        FDCE                                         r  lsu_vhd/count_reg[0]/C
+  -------------------------------------------------------------------    -------------------
+    SLICE_X46Y126        FDCE (Prop_fdce_C_Q)         0.308     5.507 f  lsu_vhd/count_reg[0]/Q
+                         net (fo=9, routed)           0.909     6.416    lsu_vhd/count_reg[0]
+    SLICE_X44Y126        LUT4 (Prop_lut4_I1_O)        0.053     6.469 f  lsu_vhd/plusOp_carry_i_17/O
+                         net (fo=2, routed)           0.419     6.888    lsu_vhd/plusOp_carry_i_17_n_0
+    SLICE_X44Y127        LUT6 (Prop_lut6_I1_O)        0.053     6.941 r  lsu_vhd/plusOp_carry_i_9/O
+                         net (fo=13, routed)          0.957     7.899    lsu_vhd/plusOp_carry_i_9_n_0
+    SLICE_X44Y129        LUT3 (Prop_lut3_I1_O)        0.053     7.952 r  lsu_vhd/plusOp_carry__0_i_2/O
+                         net (fo=2, routed)           0.575     8.526    lsu_vhd/L[6]
+    SLICE_X45Y127        LUT6 (Prop_lut6_I0_O)        0.053     8.579 r  lsu_vhd/plusOp_carry__0_i_6/O
+                         net (fo=1, routed)           0.000     8.579    lsu_vhd/plusOp_carry__0_i_6_n_0
+    SLICE_X45Y127        CARRY4 (Prop_carry4_S[2]_CO[3])
+                                                      0.235     8.814 r  lsu_vhd/plusOp_carry__0/CO[3]
+                         net (fo=1, routed)           0.000     8.814    lsu_vhd/plusOp_carry__0_n_0
+    SLICE_X45Y128        CARRY4 (Prop_carry4_CI_O[3])
+                                                      0.179     8.993 r  lsu_vhd/plusOp_carry__1/O[3]
+                         net (fo=1, routed)           0.000     8.993    lsu_vhd/plusOp[11]
+    SLICE_X45Y128        FDCE                                         r  lsu_vhd/ADDER_OUT_reg[11]/D
+  -------------------------------------------------------------------    -------------------
+
+                         (clock clk_1 rise edge)     10.000    10.000 r  
+    AL31                                              0.000    10.000 r  clk (IN)
+                         net (fo=0)                   0.000    10.000    clk
+    AL31                 IBUF (Prop_ibuf_I_O)         0.639    10.639 r  clk_IBUF_inst/O
+                         net (fo=1, routed)           2.469    13.108    clk_IBUF
+    BUFGCTRL_X0Y0        BUFG (Prop_bufg_I_O)         0.113    13.221 r  clk_IBUF_BUFG_inst/O
+                         net (fo=28, routed)          1.624    14.845    lsu_vhd/clk
+    SLICE_X45Y128        FDCE                                         r  lsu_vhd/ADDER_OUT_reg[11]/C
+                         clock pessimism              0.338    15.183    
+                         clock uncertainty           -0.035    15.147    
+    SLICE_X45Y128        FDCE (Setup_fdce_C_D)        0.051    15.198    lsu_vhd/ADDER_OUT_reg[11]
+  -------------------------------------------------------------------
+                         required time                         15.198    
+                         arrival time                          -8.993    
+  -------------------------------------------------------------------
+                         slack                                  6.205    
+
+Slack (MET) :             6.234ns  (required time - arrival time)
+  Source:                 lsu_vhd/count_reg[0]/C
+                            (rising edge-triggered cell FDCE clocked by clk_1  {rise@0.000ns fall@5.000ns period=10.000ns})
+  Destination:            lsu_vhd/ADDER_OUT_reg[5]/D
+                            (rising edge-triggered cell FDCE clocked by clk_1  {rise@0.000ns fall@5.000ns period=10.000ns})
+  Path Group:             clk_1
+  Path Type:              Setup (Max at Slow Process Corner)
+  Requirement:            10.000ns  (clk_1 rise@10.000ns - clk_1 rise@0.000ns)
+  Data Path Delay:        3.765ns  (logic 1.185ns (31.476%)  route 2.580ns (68.524%))
+  Logic Levels:           6  (CARRY4=2 LUT4=1 LUT5=2 LUT6=1)
+  Clock Path Skew:        -0.017ns (DCD - SCD + CPR)
+    Destination Clock Delay (DCD):    4.844ns = ( 14.844 - 10.000 ) 
+    Source Clock Delay      (SCD):    5.199ns
+    Clock Pessimism Removal (CPR):    0.338ns
+  Clock Uncertainty:      0.035ns  ((TSJ^2 + TIJ^2)^1/2 + DJ) / 2 + PE
+    Total System Jitter     (TSJ):    0.071ns
+    Total Input Jitter      (TIJ):    0.000ns
+    Discrete Jitter          (DJ):    0.000ns
+    Phase Error              (PE):    0.000ns
+
+    Location             Delay type                Incr(ns)  Path(ns)    Netlist Resource(s)
+  -------------------------------------------------------------------    -------------------
+                         (clock clk_1 rise edge)      0.000     0.000 r  
+    AL31                                              0.000     0.000 r  clk (IN)
+                         net (fo=0)                   0.000     0.000    clk
+    AL31                 IBUF (Prop_ibuf_I_O)         0.765     0.765 r  clk_IBUF_inst/O
+                         net (fo=1, routed)           2.586     3.351    clk_IBUF
+    BUFGCTRL_X0Y0        BUFG (Prop_bufg_I_O)         0.120     3.471 r  clk_IBUF_BUFG_inst/O
+                         net (fo=28, routed)          1.728     5.199    lsu_vhd/clk
+    SLICE_X46Y126        FDCE                                         r  lsu_vhd/count_reg[0]/C
+  -------------------------------------------------------------------    -------------------
+    SLICE_X46Y126        FDCE (Prop_fdce_C_Q)         0.308     5.507 r  lsu_vhd/count_reg[0]/Q
+                         net (fo=9, routed)           0.909     6.416    lsu_vhd/count_reg[0]
+    SLICE_X44Y126        LUT4 (Prop_lut4_I1_O)        0.053     6.469 r  lsu_vhd/plusOp_carry_i_17/O
+                         net (fo=2, routed)           0.414     6.883    lsu_vhd/plusOp_carry_i_17_n_0
+    SLICE_X44Y127        LUT5 (Prop_lut5_I4_O)        0.053     6.936 r  lsu_vhd/plusOp_carry_i_18/O
+                         net (fo=3, routed)           0.574     7.511    lsu_vhd/neqOp__6
+    SLICE_X46Y128        LUT5 (Prop_lut5_I1_O)        0.066     7.577 r  lsu_vhd/plusOp_carry_i_11/O
+                         net (fo=12, routed)          0.682     8.259    lsu_vhd/plusOp_carry_i_11_n_0
+    SLICE_X45Y126        LUT6 (Prop_lut6_I3_O)        0.168     8.427 r  lsu_vhd/plusOp_carry_i_7/O
+                         net (fo=1, routed)           0.000     8.427    lsu_vhd/plusOp_carry_i_7_n_0
+    SLICE_X45Y126        CARRY4 (Prop_carry4_S[1]_CO[3])
+                                                      0.324     8.751 r  lsu_vhd/plusOp_carry/CO[3]
+                         net (fo=1, routed)           0.000     8.751    lsu_vhd/plusOp_carry_n_0
+    SLICE_X45Y127        CARRY4 (Prop_carry4_CI_O[1])
+                                                      0.213     8.964 r  lsu_vhd/plusOp_carry__0/O[1]
+                         net (fo=1, routed)           0.000     8.964    lsu_vhd/plusOp[5]
+    SLICE_X45Y127        FDCE                                         r  lsu_vhd/ADDER_OUT_reg[5]/D
+  -------------------------------------------------------------------    -------------------
+
+                         (clock clk_1 rise edge)     10.000    10.000 r  
+    AL31                                              0.000    10.000 r  clk (IN)
+                         net (fo=0)                   0.000    10.000    clk
+    AL31                 IBUF (Prop_ibuf_I_O)         0.639    10.639 r  clk_IBUF_inst/O
+                         net (fo=1, routed)           2.469    13.108    clk_IBUF
+    BUFGCTRL_X0Y0        BUFG (Prop_bufg_I_O)         0.113    13.221 r  clk_IBUF_BUFG_inst/O
+                         net (fo=28, routed)          1.623    14.844    lsu_vhd/clk
+    SLICE_X45Y127        FDCE                                         r  lsu_vhd/ADDER_OUT_reg[5]/C
+                         clock pessimism              0.338    15.182    
+                         clock uncertainty           -0.035    15.146    
+    SLICE_X45Y127        FDCE (Setup_fdce_C_D)        0.051    15.197    lsu_vhd/ADDER_OUT_reg[5]
+  -------------------------------------------------------------------
+                         required time                         15.197    
+                         arrival time                          -8.964    
+  -------------------------------------------------------------------
+                         slack                                  6.234    
+
+Slack (MET) :             6.245ns  (required time - arrival time)
+  Source:                 lsu_vhd/count_reg[0]/C
+                            (rising edge-triggered cell FDCE clocked by clk_1  {rise@0.000ns fall@5.000ns period=10.000ns})
+  Destination:            lsu_vhd/ADDER_OUT_reg[8]/D
+                            (rising edge-triggered cell FDCE clocked by clk_1  {rise@0.000ns fall@5.000ns period=10.000ns})
+  Path Group:             clk_1
+  Path Type:              Setup (Max at Slow Process Corner)
+  Requirement:            10.000ns  (clk_1 rise@10.000ns - clk_1 rise@0.000ns)
+  Data Path Delay:        3.754ns  (logic 0.894ns (23.811%)  route 2.860ns (76.189%))
+  Logic Levels:           6  (CARRY4=2 LUT3=1 LUT4=1 LUT6=2)
+  Clock Path Skew:        -0.016ns (DCD - SCD + CPR)
+    Destination Clock Delay (DCD):    4.845ns = ( 14.845 - 10.000 ) 
+    Source Clock Delay      (SCD):    5.199ns
+    Clock Pessimism Removal (CPR):    0.338ns
+  Clock Uncertainty:      0.035ns  ((TSJ^2 + TIJ^2)^1/2 + DJ) / 2 + PE
+    Total System Jitter     (TSJ):    0.071ns
+    Total Input Jitter      (TIJ):    0.000ns
+    Discrete Jitter          (DJ):    0.000ns
+    Phase Error              (PE):    0.000ns
+
+    Location             Delay type                Incr(ns)  Path(ns)    Netlist Resource(s)
+  -------------------------------------------------------------------    -------------------
+                         (clock clk_1 rise edge)      0.000     0.000 r  
+    AL31                                              0.000     0.000 r  clk (IN)
+                         net (fo=0)                   0.000     0.000    clk
+    AL31                 IBUF (Prop_ibuf_I_O)         0.765     0.765 r  clk_IBUF_inst/O
+                         net (fo=1, routed)           2.586     3.351    clk_IBUF
+    BUFGCTRL_X0Y0        BUFG (Prop_bufg_I_O)         0.120     3.471 r  clk_IBUF_BUFG_inst/O
+                         net (fo=28, routed)          1.728     5.199    lsu_vhd/clk
+    SLICE_X46Y126        FDCE                                         r  lsu_vhd/count_reg[0]/C
+  -------------------------------------------------------------------    -------------------
+    SLICE_X46Y126        FDCE (Prop_fdce_C_Q)         0.308     5.507 f  lsu_vhd/count_reg[0]/Q
+                         net (fo=9, routed)           0.909     6.416    lsu_vhd/count_reg[0]
+    SLICE_X44Y126        LUT4 (Prop_lut4_I1_O)        0.053     6.469 f  lsu_vhd/plusOp_carry_i_17/O
+                         net (fo=2, routed)           0.419     6.888    lsu_vhd/plusOp_carry_i_17_n_0
+    SLICE_X44Y127        LUT6 (Prop_lut6_I1_O)        0.053     6.941 r  lsu_vhd/plusOp_carry_i_9/O
+                         net (fo=13, routed)          0.957     7.899    lsu_vhd/plusOp_carry_i_9_n_0
+    SLICE_X44Y129        LUT3 (Prop_lut3_I1_O)        0.053     7.952 r  lsu_vhd/plusOp_carry__0_i_2/O
+                         net (fo=2, routed)           0.575     8.526    lsu_vhd/L[6]
+    SLICE_X45Y127        LUT6 (Prop_lut6_I0_O)        0.053     8.579 r  lsu_vhd/plusOp_carry__0_i_6/O
+                         net (fo=1, routed)           0.000     8.579    lsu_vhd/plusOp_carry__0_i_6_n_0
+    SLICE_X45Y127        CARRY4 (Prop_carry4_S[2]_CO[3])
+                                                      0.235     8.814 r  lsu_vhd/plusOp_carry__0/CO[3]
+                         net (fo=1, routed)           0.000     8.814    lsu_vhd/plusOp_carry__0_n_0
+    SLICE_X45Y128        CARRY4 (Prop_carry4_CI_O[0])
+                                                      0.139     8.953 r  lsu_vhd/plusOp_carry__1/O[0]
+                         net (fo=1, routed)           0.000     8.953    lsu_vhd/plusOp[8]
+    SLICE_X45Y128        FDCE                                         r  lsu_vhd/ADDER_OUT_reg[8]/D
+  -------------------------------------------------------------------    -------------------
+
+                         (clock clk_1 rise edge)     10.000    10.000 r  
+    AL31                                              0.000    10.000 r  clk (IN)
+                         net (fo=0)                   0.000    10.000    clk
+    AL31                 IBUF (Prop_ibuf_I_O)         0.639    10.639 r  clk_IBUF_inst/O
+                         net (fo=1, routed)           2.469    13.108    clk_IBUF
+    BUFGCTRL_X0Y0        BUFG (Prop_bufg_I_O)         0.113    13.221 r  clk_IBUF_BUFG_inst/O
+                         net (fo=28, routed)          1.624    14.845    lsu_vhd/clk
+    SLICE_X45Y128        FDCE                                         r  lsu_vhd/ADDER_OUT_reg[8]/C
+                         clock pessimism              0.338    15.183    
+                         clock uncertainty           -0.035    15.147    
+    SLICE_X45Y128        FDCE (Setup_fdce_C_D)        0.051    15.198    lsu_vhd/ADDER_OUT_reg[8]
+  -------------------------------------------------------------------
+                         required time                         15.198    
+                         arrival time                          -8.953    
+  -------------------------------------------------------------------
+                         slack                                  6.245    
+
+Slack (MET) :             6.248ns  (required time - arrival time)
+  Source:                 lsu_vhd/count_reg[0]/C
+                            (rising edge-triggered cell FDCE clocked by clk_1  {rise@0.000ns fall@5.000ns period=10.000ns})
+  Destination:            lsu_vhd/ADDER_OUT_reg[10]/D
+                            (rising edge-triggered cell FDCE clocked by clk_1  {rise@0.000ns fall@5.000ns period=10.000ns})
+  Path Group:             clk_1
+  Path Type:              Setup (Max at Slow Process Corner)
+  Requirement:            10.000ns  (clk_1 rise@10.000ns - clk_1 rise@0.000ns)
+  Data Path Delay:        3.751ns  (logic 0.891ns (23.751%)  route 2.860ns (76.249%))
+  Logic Levels:           6  (CARRY4=2 LUT3=1 LUT4=1 LUT6=2)
+  Clock Path Skew:        -0.016ns (DCD - SCD + CPR)
+    Destination Clock Delay (DCD):    4.845ns = ( 14.845 - 10.000 ) 
+    Source Clock Delay      (SCD):    5.199ns
+    Clock Pessimism Removal (CPR):    0.338ns
+  Clock Uncertainty:      0.035ns  ((TSJ^2 + TIJ^2)^1/2 + DJ) / 2 + PE
+    Total System Jitter     (TSJ):    0.071ns
+    Total Input Jitter      (TIJ):    0.000ns
+    Discrete Jitter          (DJ):    0.000ns
+    Phase Error              (PE):    0.000ns
+
+    Location             Delay type                Incr(ns)  Path(ns)    Netlist Resource(s)
+  -------------------------------------------------------------------    -------------------
+                         (clock clk_1 rise edge)      0.000     0.000 r  
+    AL31                                              0.000     0.000 r  clk (IN)
+                         net (fo=0)                   0.000     0.000    clk
+    AL31                 IBUF (Prop_ibuf_I_O)         0.765     0.765 r  clk_IBUF_inst/O
+                         net (fo=1, routed)           2.586     3.351    clk_IBUF
+    BUFGCTRL_X0Y0        BUFG (Prop_bufg_I_O)         0.120     3.471 r  clk_IBUF_BUFG_inst/O
+                         net (fo=28, routed)          1.728     5.199    lsu_vhd/clk
+    SLICE_X46Y126        FDCE                                         r  lsu_vhd/count_reg[0]/C
+  -------------------------------------------------------------------    -------------------
+    SLICE_X46Y126        FDCE (Prop_fdce_C_Q)         0.308     5.507 f  lsu_vhd/count_reg[0]/Q
+                         net (fo=9, routed)           0.909     6.416    lsu_vhd/count_reg[0]
+    SLICE_X44Y126        LUT4 (Prop_lut4_I1_O)        0.053     6.469 f  lsu_vhd/plusOp_carry_i_17/O
+                         net (fo=2, routed)           0.419     6.888    lsu_vhd/plusOp_carry_i_17_n_0
+    SLICE_X44Y127        LUT6 (Prop_lut6_I1_O)        0.053     6.941 r  lsu_vhd/plusOp_carry_i_9/O
+                         net (fo=13, routed)          0.957     7.899    lsu_vhd/plusOp_carry_i_9_n_0
+    SLICE_X44Y129        LUT3 (Prop_lut3_I1_O)        0.053     7.952 r  lsu_vhd/plusOp_carry__0_i_2/O
+                         net (fo=2, routed)           0.575     8.526    lsu_vhd/L[6]
+    SLICE_X45Y127        LUT6 (Prop_lut6_I0_O)        0.053     8.579 r  lsu_vhd/plusOp_carry__0_i_6/O
+                         net (fo=1, routed)           0.000     8.579    lsu_vhd/plusOp_carry__0_i_6_n_0
+    SLICE_X45Y127        CARRY4 (Prop_carry4_S[2]_CO[3])
+                                                      0.235     8.814 r  lsu_vhd/plusOp_carry__0/CO[3]
+                         net (fo=1, routed)           0.000     8.814    lsu_vhd/plusOp_carry__0_n_0
+    SLICE_X45Y128        CARRY4 (Prop_carry4_CI_O[2])
+                                                      0.136     8.950 r  lsu_vhd/plusOp_carry__1/O[2]
+                         net (fo=1, routed)           0.000     8.950    lsu_vhd/plusOp[10]
+    SLICE_X45Y128        FDCE                                         r  lsu_vhd/ADDER_OUT_reg[10]/D
+  -------------------------------------------------------------------    -------------------
+
+                         (clock clk_1 rise edge)     10.000    10.000 r  
+    AL31                                              0.000    10.000 r  clk (IN)
+                         net (fo=0)                   0.000    10.000    clk
+    AL31                 IBUF (Prop_ibuf_I_O)         0.639    10.639 r  clk_IBUF_inst/O
+                         net (fo=1, routed)           2.469    13.108    clk_IBUF
+    BUFGCTRL_X0Y0        BUFG (Prop_bufg_I_O)         0.113    13.221 r  clk_IBUF_BUFG_inst/O
+                         net (fo=28, routed)          1.624    14.845    lsu_vhd/clk
+    SLICE_X45Y128        FDCE                                         r  lsu_vhd/ADDER_OUT_reg[10]/C
+                         clock pessimism              0.338    15.183    
+                         clock uncertainty           -0.035    15.147    
+    SLICE_X45Y128        FDCE (Setup_fdce_C_D)        0.051    15.198    lsu_vhd/ADDER_OUT_reg[10]
+  -------------------------------------------------------------------
+                         required time                         15.198    
+                         arrival time                          -8.950    
+  -------------------------------------------------------------------
+                         slack                                  6.248    
+
+Slack (MET) :             6.268ns  (required time - arrival time)
+  Source:                 lsu_vhd/count_reg[0]/C
+                            (rising edge-triggered cell FDCE clocked by clk_1  {rise@0.000ns fall@5.000ns period=10.000ns})
+  Destination:            lsu_vhd/ADDER_OUT_reg[7]/D
+                            (rising edge-triggered cell FDCE clocked by clk_1  {rise@0.000ns fall@5.000ns period=10.000ns})
+  Path Group:             clk_1
+  Path Type:              Setup (Max at Slow Process Corner)
+  Requirement:            10.000ns  (clk_1 rise@10.000ns - clk_1 rise@0.000ns)
+  Data Path Delay:        3.731ns  (logic 1.151ns (30.852%)  route 2.580ns (69.149%))
+  Logic Levels:           6  (CARRY4=2 LUT4=1 LUT5=2 LUT6=1)
+  Clock Path Skew:        -0.017ns (DCD - SCD + CPR)
+    Destination Clock Delay (DCD):    4.844ns = ( 14.844 - 10.000 ) 
+    Source Clock Delay      (SCD):    5.199ns
+    Clock Pessimism Removal (CPR):    0.338ns
+  Clock Uncertainty:      0.035ns  ((TSJ^2 + TIJ^2)^1/2 + DJ) / 2 + PE
+    Total System Jitter     (TSJ):    0.071ns
+    Total Input Jitter      (TIJ):    0.000ns
+    Discrete Jitter          (DJ):    0.000ns
+    Phase Error              (PE):    0.000ns
+
+    Location             Delay type                Incr(ns)  Path(ns)    Netlist Resource(s)
+  -------------------------------------------------------------------    -------------------
+                         (clock clk_1 rise edge)      0.000     0.000 r  
+    AL31                                              0.000     0.000 r  clk (IN)
+                         net (fo=0)                   0.000     0.000    clk
+    AL31                 IBUF (Prop_ibuf_I_O)         0.765     0.765 r  clk_IBUF_inst/O
+                         net (fo=1, routed)           2.586     3.351    clk_IBUF
+    BUFGCTRL_X0Y0        BUFG (Prop_bufg_I_O)         0.120     3.471 r  clk_IBUF_BUFG_inst/O
+                         net (fo=28, routed)          1.728     5.199    lsu_vhd/clk
+    SLICE_X46Y126        FDCE                                         r  lsu_vhd/count_reg[0]/C
+  -------------------------------------------------------------------    -------------------
+    SLICE_X46Y126        FDCE (Prop_fdce_C_Q)         0.308     5.507 r  lsu_vhd/count_reg[0]/Q
+                         net (fo=9, routed)           0.909     6.416    lsu_vhd/count_reg[0]
+    SLICE_X44Y126        LUT4 (Prop_lut4_I1_O)        0.053     6.469 r  lsu_vhd/plusOp_carry_i_17/O
+                         net (fo=2, routed)           0.414     6.883    lsu_vhd/plusOp_carry_i_17_n_0
+    SLICE_X44Y127        LUT5 (Prop_lut5_I4_O)        0.053     6.936 r  lsu_vhd/plusOp_carry_i_18/O
+                         net (fo=3, routed)           0.574     7.511    lsu_vhd/neqOp__6
+    SLICE_X46Y128        LUT5 (Prop_lut5_I1_O)        0.066     7.577 r  lsu_vhd/plusOp_carry_i_11/O
+                         net (fo=12, routed)          0.682     8.259    lsu_vhd/plusOp_carry_i_11_n_0
+    SLICE_X45Y126        LUT6 (Prop_lut6_I3_O)        0.168     8.427 r  lsu_vhd/plusOp_carry_i_7/O
+                         net (fo=1, routed)           0.000     8.427    lsu_vhd/plusOp_carry_i_7_n_0
+    SLICE_X45Y126        CARRY4 (Prop_carry4_S[1]_CO[3])
+                                                      0.324     8.751 r  lsu_vhd/plusOp_carry/CO[3]
+                         net (fo=1, routed)           0.000     8.751    lsu_vhd/plusOp_carry_n_0
+    SLICE_X45Y127        CARRY4 (Prop_carry4_CI_O[3])
+                                                      0.179     8.930 r  lsu_vhd/plusOp_carry__0/O[3]
+                         net (fo=1, routed)           0.000     8.930    lsu_vhd/plusOp[7]
+    SLICE_X45Y127        FDCE                                         r  lsu_vhd/ADDER_OUT_reg[7]/D
+  -------------------------------------------------------------------    -------------------
+
+                         (clock clk_1 rise edge)     10.000    10.000 r  
+    AL31                                              0.000    10.000 r  clk (IN)
+                         net (fo=0)                   0.000    10.000    clk
+    AL31                 IBUF (Prop_ibuf_I_O)         0.639    10.639 r  clk_IBUF_inst/O
+                         net (fo=1, routed)           2.469    13.108    clk_IBUF
+    BUFGCTRL_X0Y0        BUFG (Prop_bufg_I_O)         0.113    13.221 r  clk_IBUF_BUFG_inst/O
+                         net (fo=28, routed)          1.623    14.844    lsu_vhd/clk
+    SLICE_X45Y127        FDCE                                         r  lsu_vhd/ADDER_OUT_reg[7]/C
+                         clock pessimism              0.338    15.182    
+                         clock uncertainty           -0.035    15.146    
+    SLICE_X45Y127        FDCE (Setup_fdce_C_D)        0.051    15.197    lsu_vhd/ADDER_OUT_reg[7]
+  -------------------------------------------------------------------
+                         required time                         15.197    
+                         arrival time                          -8.930    
+  -------------------------------------------------------------------
+                         slack                                  6.268    
+
+Slack (MET) :             6.308ns  (required time - arrival time)
+  Source:                 lsu_vhd/count_reg[0]/C
+                            (rising edge-triggered cell FDCE clocked by clk_1  {rise@0.000ns fall@5.000ns period=10.000ns})
+  Destination:            lsu_vhd/ADDER_OUT_reg[4]/D
+                            (rising edge-triggered cell FDCE clocked by clk_1  {rise@0.000ns fall@5.000ns period=10.000ns})
+  Path Group:             clk_1
+  Path Type:              Setup (Max at Slow Process Corner)
+  Requirement:            10.000ns  (clk_1 rise@10.000ns - clk_1 rise@0.000ns)
+  Data Path Delay:        3.691ns  (logic 1.111ns (30.102%)  route 2.580ns (69.898%))
+  Logic Levels:           6  (CARRY4=2 LUT4=1 LUT5=2 LUT6=1)
+  Clock Path Skew:        -0.017ns (DCD - SCD + CPR)
+    Destination Clock Delay (DCD):    4.844ns = ( 14.844 - 10.000 ) 
+    Source Clock Delay      (SCD):    5.199ns
+    Clock Pessimism Removal (CPR):    0.338ns
+  Clock Uncertainty:      0.035ns  ((TSJ^2 + TIJ^2)^1/2 + DJ) / 2 + PE
+    Total System Jitter     (TSJ):    0.071ns
+    Total Input Jitter      (TIJ):    0.000ns
+    Discrete Jitter          (DJ):    0.000ns
+    Phase Error              (PE):    0.000ns
+
+    Location             Delay type                Incr(ns)  Path(ns)    Netlist Resource(s)
+  -------------------------------------------------------------------    -------------------
+                         (clock clk_1 rise edge)      0.000     0.000 r  
+    AL31                                              0.000     0.000 r  clk (IN)
+                         net (fo=0)                   0.000     0.000    clk
+    AL31                 IBUF (Prop_ibuf_I_O)         0.765     0.765 r  clk_IBUF_inst/O
+                         net (fo=1, routed)           2.586     3.351    clk_IBUF
+    BUFGCTRL_X0Y0        BUFG (Prop_bufg_I_O)         0.120     3.471 r  clk_IBUF_BUFG_inst/O
+                         net (fo=28, routed)          1.728     5.199    lsu_vhd/clk
+    SLICE_X46Y126        FDCE                                         r  lsu_vhd/count_reg[0]/C
+  -------------------------------------------------------------------    -------------------
+    SLICE_X46Y126        FDCE (Prop_fdce_C_Q)         0.308     5.507 r  lsu_vhd/count_reg[0]/Q
+                         net (fo=9, routed)           0.909     6.416    lsu_vhd/count_reg[0]
+    SLICE_X44Y126        LUT4 (Prop_lut4_I1_O)        0.053     6.469 r  lsu_vhd/plusOp_carry_i_17/O
+                         net (fo=2, routed)           0.414     6.883    lsu_vhd/plusOp_carry_i_17_n_0
+    SLICE_X44Y127        LUT5 (Prop_lut5_I4_O)        0.053     6.936 r  lsu_vhd/plusOp_carry_i_18/O
+                         net (fo=3, routed)           0.574     7.511    lsu_vhd/neqOp__6
+    SLICE_X46Y128        LUT5 (Prop_lut5_I1_O)        0.066     7.577 r  lsu_vhd/plusOp_carry_i_11/O
+                         net (fo=12, routed)          0.682     8.259    lsu_vhd/plusOp_carry_i_11_n_0
+    SLICE_X45Y126        LUT6 (Prop_lut6_I3_O)        0.168     8.427 r  lsu_vhd/plusOp_carry_i_7/O
+                         net (fo=1, routed)           0.000     8.427    lsu_vhd/plusOp_carry_i_7_n_0
+    SLICE_X45Y126        CARRY4 (Prop_carry4_S[1]_CO[3])
+                                                      0.324     8.751 r  lsu_vhd/plusOp_carry/CO[3]
+                         net (fo=1, routed)           0.000     8.751    lsu_vhd/plusOp_carry_n_0
+    SLICE_X45Y127        CARRY4 (Prop_carry4_CI_O[0])
+                                                      0.139     8.890 r  lsu_vhd/plusOp_carry__0/O[0]
+                         net (fo=1, routed)           0.000     8.890    lsu_vhd/plusOp[4]
+    SLICE_X45Y127        FDCE                                         r  lsu_vhd/ADDER_OUT_reg[4]/D
+  -------------------------------------------------------------------    -------------------
+
+                         (clock clk_1 rise edge)     10.000    10.000 r  
+    AL31                                              0.000    10.000 r  clk (IN)
+                         net (fo=0)                   0.000    10.000    clk
+    AL31                 IBUF (Prop_ibuf_I_O)         0.639    10.639 r  clk_IBUF_inst/O
+                         net (fo=1, routed)           2.469    13.108    clk_IBUF
+    BUFGCTRL_X0Y0        BUFG (Prop_bufg_I_O)         0.113    13.221 r  clk_IBUF_BUFG_inst/O
+                         net (fo=28, routed)          1.623    14.844    lsu_vhd/clk
+    SLICE_X45Y127        FDCE                                         r  lsu_vhd/ADDER_OUT_reg[4]/C
+                         clock pessimism              0.338    15.182    
+                         clock uncertainty           -0.035    15.146    
+    SLICE_X45Y127        FDCE (Setup_fdce_C_D)        0.051    15.197    lsu_vhd/ADDER_OUT_reg[4]
+  -------------------------------------------------------------------
+                         required time                         15.197    
+                         arrival time                          -8.890    
+  -------------------------------------------------------------------
+                         slack                                  6.308    
+
+Slack (MET) :             6.311ns  (required time - arrival time)
+  Source:                 lsu_vhd/count_reg[0]/C
+                            (rising edge-triggered cell FDCE clocked by clk_1  {rise@0.000ns fall@5.000ns period=10.000ns})
+  Destination:            lsu_vhd/ADDER_OUT_reg[6]/D
+                            (rising edge-triggered cell FDCE clocked by clk_1  {rise@0.000ns fall@5.000ns period=10.000ns})
+  Path Group:             clk_1
+  Path Type:              Setup (Max at Slow Process Corner)
+  Requirement:            10.000ns  (clk_1 rise@10.000ns - clk_1 rise@0.000ns)
+  Data Path Delay:        3.688ns  (logic 1.108ns (30.045%)  route 2.580ns (69.955%))
+  Logic Levels:           6  (CARRY4=2 LUT4=1 LUT5=2 LUT6=1)
+  Clock Path Skew:        -0.017ns (DCD - SCD + CPR)
+    Destination Clock Delay (DCD):    4.844ns = ( 14.844 - 10.000 ) 
+    Source Clock Delay      (SCD):    5.199ns
+    Clock Pessimism Removal (CPR):    0.338ns
+  Clock Uncertainty:      0.035ns  ((TSJ^2 + TIJ^2)^1/2 + DJ) / 2 + PE
+    Total System Jitter     (TSJ):    0.071ns
+    Total Input Jitter      (TIJ):    0.000ns
+    Discrete Jitter          (DJ):    0.000ns
+    Phase Error              (PE):    0.000ns
+
+    Location             Delay type                Incr(ns)  Path(ns)    Netlist Resource(s)
+  -------------------------------------------------------------------    -------------------
+                         (clock clk_1 rise edge)      0.000     0.000 r  
+    AL31                                              0.000     0.000 r  clk (IN)
+                         net (fo=0)                   0.000     0.000    clk
+    AL31                 IBUF (Prop_ibuf_I_O)         0.765     0.765 r  clk_IBUF_inst/O
+                         net (fo=1, routed)           2.586     3.351    clk_IBUF
+    BUFGCTRL_X0Y0        BUFG (Prop_bufg_I_O)         0.120     3.471 r  clk_IBUF_BUFG_inst/O
+                         net (fo=28, routed)          1.728     5.199    lsu_vhd/clk
+    SLICE_X46Y126        FDCE                                         r  lsu_vhd/count_reg[0]/C
+  -------------------------------------------------------------------    -------------------
+    SLICE_X46Y126        FDCE (Prop_fdce_C_Q)         0.308     5.507 r  lsu_vhd/count_reg[0]/Q
+                         net (fo=9, routed)           0.909     6.416    lsu_vhd/count_reg[0]
+    SLICE_X44Y126        LUT4 (Prop_lut4_I1_O)        0.053     6.469 r  lsu_vhd/plusOp_carry_i_17/O
+                         net (fo=2, routed)           0.414     6.883    lsu_vhd/plusOp_carry_i_17_n_0
+    SLICE_X44Y127        LUT5 (Prop_lut5_I4_O)        0.053     6.936 r  lsu_vhd/plusOp_carry_i_18/O
+                         net (fo=3, routed)           0.574     7.511    lsu_vhd/neqOp__6
+    SLICE_X46Y128        LUT5 (Prop_lut5_I1_O)        0.066     7.577 r  lsu_vhd/plusOp_carry_i_11/O
+                         net (fo=12, routed)          0.682     8.259    lsu_vhd/plusOp_carry_i_11_n_0
+    SLICE_X45Y126        LUT6 (Prop_lut6_I3_O)        0.168     8.427 r  lsu_vhd/plusOp_carry_i_7/O
+                         net (fo=1, routed)           0.000     8.427    lsu_vhd/plusOp_carry_i_7_n_0
+    SLICE_X45Y126        CARRY4 (Prop_carry4_S[1]_CO[3])
+                                                      0.324     8.751 r  lsu_vhd/plusOp_carry/CO[3]
+                         net (fo=1, routed)           0.000     8.751    lsu_vhd/plusOp_carry_n_0
+    SLICE_X45Y127        CARRY4 (Prop_carry4_CI_O[2])
+                                                      0.136     8.887 r  lsu_vhd/plusOp_carry__0/O[2]
+                         net (fo=1, routed)           0.000     8.887    lsu_vhd/plusOp[6]
+    SLICE_X45Y127        FDCE                                         r  lsu_vhd/ADDER_OUT_reg[6]/D
+  -------------------------------------------------------------------    -------------------
+
+                         (clock clk_1 rise edge)     10.000    10.000 r  
+    AL31                                              0.000    10.000 r  clk (IN)
+                         net (fo=0)                   0.000    10.000    clk
+    AL31                 IBUF (Prop_ibuf_I_O)         0.639    10.639 r  clk_IBUF_inst/O
+                         net (fo=1, routed)           2.469    13.108    clk_IBUF
+    BUFGCTRL_X0Y0        BUFG (Prop_bufg_I_O)         0.113    13.221 r  clk_IBUF_BUFG_inst/O
+                         net (fo=28, routed)          1.623    14.844    lsu_vhd/clk
+    SLICE_X45Y127        FDCE                                         r  lsu_vhd/ADDER_OUT_reg[6]/C
+                         clock pessimism              0.338    15.182    
+                         clock uncertainty           -0.035    15.146    
+    SLICE_X45Y127        FDCE (Setup_fdce_C_D)        0.051    15.197    lsu_vhd/ADDER_OUT_reg[6]
+  -------------------------------------------------------------------
+                         required time                         15.197    
+                         arrival time                          -8.887    
+  -------------------------------------------------------------------
+                         slack                                  6.311    
+
+Slack (MET) :             6.391ns  (required time - arrival time)
+  Source:                 lsu_vhd/count_reg[0]/C
+                            (rising edge-triggered cell FDCE clocked by clk_1  {rise@0.000ns fall@5.000ns period=10.000ns})
+  Destination:            lsu_vhd/ADDER_OUT_reg[3]/D
+                            (rising edge-triggered cell FDCE clocked by clk_1  {rise@0.000ns fall@5.000ns period=10.000ns})
+  Path Group:             clk_1
+  Path Type:              Setup (Max at Slow Process Corner)
+  Requirement:            10.000ns  (clk_1 rise@10.000ns - clk_1 rise@0.000ns)
+  Data Path Delay:        3.607ns  (logic 1.027ns (28.474%)  route 2.580ns (71.526%))
+  Logic Levels:           5  (CARRY4=1 LUT4=1 LUT5=2 LUT6=1)
+  Clock Path Skew:        -0.018ns (DCD - SCD + CPR)
+    Destination Clock Delay (DCD):    4.843ns = ( 14.843 - 10.000 ) 
+    Source Clock Delay      (SCD):    5.199ns
+    Clock Pessimism Removal (CPR):    0.338ns
+  Clock Uncertainty:      0.035ns  ((TSJ^2 + TIJ^2)^1/2 + DJ) / 2 + PE
+    Total System Jitter     (TSJ):    0.071ns
+    Total Input Jitter      (TIJ):    0.000ns
+    Discrete Jitter          (DJ):    0.000ns
+    Phase Error              (PE):    0.000ns
+
+    Location             Delay type                Incr(ns)  Path(ns)    Netlist Resource(s)
+  -------------------------------------------------------------------    -------------------
+                         (clock clk_1 rise edge)      0.000     0.000 r  
+    AL31                                              0.000     0.000 r  clk (IN)
+                         net (fo=0)                   0.000     0.000    clk
+    AL31                 IBUF (Prop_ibuf_I_O)         0.765     0.765 r  clk_IBUF_inst/O
+                         net (fo=1, routed)           2.586     3.351    clk_IBUF
+    BUFGCTRL_X0Y0        BUFG (Prop_bufg_I_O)         0.120     3.471 r  clk_IBUF_BUFG_inst/O
+                         net (fo=28, routed)          1.728     5.199    lsu_vhd/clk
+    SLICE_X46Y126        FDCE                                         r  lsu_vhd/count_reg[0]/C
+  -------------------------------------------------------------------    -------------------
+    SLICE_X46Y126        FDCE (Prop_fdce_C_Q)         0.308     5.507 r  lsu_vhd/count_reg[0]/Q
+                         net (fo=9, routed)           0.909     6.416    lsu_vhd/count_reg[0]
+    SLICE_X44Y126        LUT4 (Prop_lut4_I1_O)        0.053     6.469 r  lsu_vhd/plusOp_carry_i_17/O
+                         net (fo=2, routed)           0.414     6.883    lsu_vhd/plusOp_carry_i_17_n_0
+    SLICE_X44Y127        LUT5 (Prop_lut5_I4_O)        0.053     6.936 r  lsu_vhd/plusOp_carry_i_18/O
+                         net (fo=3, routed)           0.574     7.511    lsu_vhd/neqOp__6
+    SLICE_X46Y128        LUT5 (Prop_lut5_I1_O)        0.066     7.577 r  lsu_vhd/plusOp_carry_i_11/O
+                         net (fo=12, routed)          0.682     8.259    lsu_vhd/plusOp_carry_i_11_n_0
+    SLICE_X45Y126        LUT6 (Prop_lut6_I3_O)        0.168     8.427 r  lsu_vhd/plusOp_carry_i_7/O
+                         net (fo=1, routed)           0.000     8.427    lsu_vhd/plusOp_carry_i_7_n_0
+    SLICE_X45Y126        CARRY4 (Prop_carry4_S[1]_O[3])
+                                                      0.379     8.806 r  lsu_vhd/plusOp_carry/O[3]
+                         net (fo=1, routed)           0.000     8.806    lsu_vhd/plusOp[3]
+    SLICE_X45Y126        FDCE                                         r  lsu_vhd/ADDER_OUT_reg[3]/D
+  -------------------------------------------------------------------    -------------------
+
+                         (clock clk_1 rise edge)     10.000    10.000 r  
+    AL31                                              0.000    10.000 r  clk (IN)
+                         net (fo=0)                   0.000    10.000    clk
+    AL31                 IBUF (Prop_ibuf_I_O)         0.639    10.639 r  clk_IBUF_inst/O
+                         net (fo=1, routed)           2.469    13.108    clk_IBUF
+    BUFGCTRL_X0Y0        BUFG (Prop_bufg_I_O)         0.113    13.221 r  clk_IBUF_BUFG_inst/O
+                         net (fo=28, routed)          1.622    14.843    lsu_vhd/clk
+    SLICE_X45Y126        FDCE                                         r  lsu_vhd/ADDER_OUT_reg[3]/C
+                         clock pessimism              0.338    15.181    
+                         clock uncertainty           -0.035    15.145    
+    SLICE_X45Y126        FDCE (Setup_fdce_C_D)        0.051    15.196    lsu_vhd/ADDER_OUT_reg[3]
+  -------------------------------------------------------------------
+                         required time                         15.196    
+                         arrival time                          -8.806    
+  -------------------------------------------------------------------
+                         slack                                  6.391    
+
+
+
+
+
+Min Delay Paths
+--------------------------------------------------------------------------------------
+Slack (MET) :             0.143ns  (arrival time - required time)
+  Source:                 lsu_vhd/ADDER_OUT_reg[8]/C
+                            (rising edge-triggered cell FDCE clocked by clk_1  {rise@0.000ns fall@5.000ns period=10.000ns})
+  Destination:            lsu_vhd/DMEM_0/U0/inst_blk_mem_gen/gnbram.gnativebmg.native_blk_mem_gen/valid.cstr/ramloop[0].ram.r/prim_init.ram/DEVICE_7SERIES.NO_BMM_INFO.SDP.SIMPLE_PRIM36.ram/ADDRARDADDR[10]
+                            (rising edge-triggered cell RAMB36E1 clocked by clk_1  {rise@0.000ns fall@5.000ns period=10.000ns})
+  Path Group:             clk_1
+  Path Type:              Hold (Min at Fast Process Corner)
+  Requirement:            0.000ns  (clk_1 rise@0.000ns - clk_1 rise@0.000ns)
+  Data Path Delay:        0.427ns  (logic 0.100ns (23.404%)  route 0.327ns (76.596%))
+  Logic Levels:           0  
+  Clock Path Skew:        0.102ns (DCD - SCD - CPR)
+    Destination Clock Delay (DCD):    2.487ns
+    Source Clock Delay      (SCD):    1.957ns
+    Clock Pessimism Removal (CPR):    0.429ns
+
+    Location             Delay type                Incr(ns)  Path(ns)    Netlist Resource(s)
+  -------------------------------------------------------------------    -------------------
+                         (clock clk_1 rise edge)      0.000     0.000 r  
+    AL31                                              0.000     0.000 r  clk (IN)
+                         net (fo=0)                   0.000     0.000    clk
+    AL31                 IBUF (Prop_ibuf_I_O)         0.165     0.165 r  clk_IBUF_inst/O
+                         net (fo=1, routed)           1.087     1.252    clk_IBUF
+    BUFGCTRL_X0Y0        BUFG (Prop_bufg_I_O)         0.026     1.278 r  clk_IBUF_BUFG_inst/O
+                         net (fo=28, routed)          0.679     1.957    lsu_vhd/clk
+    SLICE_X45Y128        FDCE                                         r  lsu_vhd/ADDER_OUT_reg[8]/C
+  -------------------------------------------------------------------    -------------------
+    SLICE_X45Y128        FDCE (Prop_fdce_C_Q)         0.100     2.057 r  lsu_vhd/ADDER_OUT_reg[8]/Q
+                         net (fo=5, routed)           0.327     2.384    lsu_vhd/DMEM_0/U0/inst_blk_mem_gen/gnbram.gnativebmg.native_blk_mem_gen/valid.cstr/ramloop[0].ram.r/prim_init.ram/addra[6]
+    RAMB36_X3Y26         RAMB36E1                                     r  lsu_vhd/DMEM_0/U0/inst_blk_mem_gen/gnbram.gnativebmg.native_blk_mem_gen/valid.cstr/ramloop[0].ram.r/prim_init.ram/DEVICE_7SERIES.NO_BMM_INFO.SDP.SIMPLE_PRIM36.ram/ADDRARDADDR[10]
+  -------------------------------------------------------------------    -------------------
+
+                         (clock clk_1 rise edge)      0.000     0.000 r  
+    AL31                                              0.000     0.000 r  clk (IN)
+                         net (fo=0)                   0.000     0.000    clk
+    AL31                 IBUF (Prop_ibuf_I_O)         0.332     0.332 r  clk_IBUF_inst/O
+                         net (fo=1, routed)           1.157     1.489    clk_IBUF
+    BUFGCTRL_X0Y0        BUFG (Prop_bufg_I_O)         0.030     1.519 r  clk_IBUF_BUFG_inst/O
+                         net (fo=28, routed)          0.969     2.487    lsu_vhd/DMEM_0/U0/inst_blk_mem_gen/gnbram.gnativebmg.native_blk_mem_gen/valid.cstr/ramloop[0].ram.r/prim_init.ram/clka
+    RAMB36_X3Y26         RAMB36E1                                     r  lsu_vhd/DMEM_0/U0/inst_blk_mem_gen/gnbram.gnativebmg.native_blk_mem_gen/valid.cstr/ramloop[0].ram.r/prim_init.ram/DEVICE_7SERIES.NO_BMM_INFO.SDP.SIMPLE_PRIM36.ram/CLKARDCLK
+                         clock pessimism             -0.429     2.059    
+    RAMB36_X3Y26         RAMB36E1 (Hold_ramb36e1_CLKARDCLK_ADDRARDADDR[10])
+                                                      0.183     2.242    lsu_vhd/DMEM_0/U0/inst_blk_mem_gen/gnbram.gnativebmg.native_blk_mem_gen/valid.cstr/ramloop[0].ram.r/prim_init.ram/DEVICE_7SERIES.NO_BMM_INFO.SDP.SIMPLE_PRIM36.ram
+  -------------------------------------------------------------------
+                         required time                         -2.242    
+                         arrival time                           2.384    
+  -------------------------------------------------------------------
+                         slack                                  0.143    
+
+Slack (MET) :             0.144ns  (arrival time - required time)
+  Source:                 lsu_vhd/ADDER_OUT_reg[12]/C
+                            (rising edge-triggered cell FDCE clocked by clk_1  {rise@0.000ns fall@5.000ns period=10.000ns})
+  Destination:            lsu_vhd/DMEM_0/U0/inst_blk_mem_gen/gnbram.gnativebmg.native_blk_mem_gen/valid.cstr/ramloop[0].ram.r/prim_init.ram/DEVICE_7SERIES.NO_BMM_INFO.SDP.SIMPLE_PRIM36.ram/ADDRARDADDR[14]
+                            (rising edge-triggered cell RAMB36E1 clocked by clk_1  {rise@0.000ns fall@5.000ns period=10.000ns})
+  Path Group:             clk_1
+  Path Type:              Hold (Min at Fast Process Corner)
+  Requirement:            0.000ns  (clk_1 rise@0.000ns - clk_1 rise@0.000ns)
+  Data Path Delay:        0.427ns  (logic 0.100ns (23.415%)  route 0.327ns (76.585%))
+  Logic Levels:           0  
+  Clock Path Skew:        0.101ns (DCD - SCD - CPR)
+    Destination Clock Delay (DCD):    2.487ns
+    Source Clock Delay      (SCD):    1.958ns
+    Clock Pessimism Removal (CPR):    0.429ns
+
+    Location             Delay type                Incr(ns)  Path(ns)    Netlist Resource(s)
+  -------------------------------------------------------------------    -------------------
+                         (clock clk_1 rise edge)      0.000     0.000 r  
+    AL31                                              0.000     0.000 r  clk (IN)
+                         net (fo=0)                   0.000     0.000    clk
+    AL31                 IBUF (Prop_ibuf_I_O)         0.165     0.165 r  clk_IBUF_inst/O
+                         net (fo=1, routed)           1.087     1.252    clk_IBUF
+    BUFGCTRL_X0Y0        BUFG (Prop_bufg_I_O)         0.026     1.278 r  clk_IBUF_BUFG_inst/O
+                         net (fo=28, routed)          0.680     1.958    lsu_vhd/clk
+    SLICE_X45Y129        FDCE                                         r  lsu_vhd/ADDER_OUT_reg[12]/C
+  -------------------------------------------------------------------    -------------------
+    SLICE_X45Y129        FDCE (Prop_fdce_C_Q)         0.100     2.058 r  lsu_vhd/ADDER_OUT_reg[12]/Q
+                         net (fo=5, routed)           0.327     2.385    lsu_vhd/DMEM_0/U0/inst_blk_mem_gen/gnbram.gnativebmg.native_blk_mem_gen/valid.cstr/ramloop[0].ram.r/prim_init.ram/addra[10]
+    RAMB36_X3Y26         RAMB36E1                                     r  lsu_vhd/DMEM_0/U0/inst_blk_mem_gen/gnbram.gnativebmg.native_blk_mem_gen/valid.cstr/ramloop[0].ram.r/prim_init.ram/DEVICE_7SERIES.NO_BMM_INFO.SDP.SIMPLE_PRIM36.ram/ADDRARDADDR[14]
+  -------------------------------------------------------------------    -------------------
+
+                         (clock clk_1 rise edge)      0.000     0.000 r  
+    AL31                                              0.000     0.000 r  clk (IN)
+                         net (fo=0)                   0.000     0.000    clk
+    AL31                 IBUF (Prop_ibuf_I_O)         0.332     0.332 r  clk_IBUF_inst/O
+                         net (fo=1, routed)           1.157     1.489    clk_IBUF
+    BUFGCTRL_X0Y0        BUFG (Prop_bufg_I_O)         0.030     1.519 r  clk_IBUF_BUFG_inst/O
+                         net (fo=28, routed)          0.969     2.487    lsu_vhd/DMEM_0/U0/inst_blk_mem_gen/gnbram.gnativebmg.native_blk_mem_gen/valid.cstr/ramloop[0].ram.r/prim_init.ram/clka
+    RAMB36_X3Y26         RAMB36E1                                     r  lsu_vhd/DMEM_0/U0/inst_blk_mem_gen/gnbram.gnativebmg.native_blk_mem_gen/valid.cstr/ramloop[0].ram.r/prim_init.ram/DEVICE_7SERIES.NO_BMM_INFO.SDP.SIMPLE_PRIM36.ram/CLKARDCLK
+                         clock pessimism             -0.429     2.059    
+    RAMB36_X3Y26         RAMB36E1 (Hold_ramb36e1_CLKARDCLK_ADDRARDADDR[14])
+                                                      0.183     2.242    lsu_vhd/DMEM_0/U0/inst_blk_mem_gen/gnbram.gnativebmg.native_blk_mem_gen/valid.cstr/ramloop[0].ram.r/prim_init.ram/DEVICE_7SERIES.NO_BMM_INFO.SDP.SIMPLE_PRIM36.ram
+  -------------------------------------------------------------------
+                         required time                         -2.242    
+                         arrival time                           2.385    
+  -------------------------------------------------------------------
+                         slack                                  0.144    
+
+Slack (MET) :             0.145ns  (arrival time - required time)
+  Source:                 lsu_vhd/ADDER_OUT_reg[8]/C
+                            (rising edge-triggered cell FDCE clocked by clk_1  {rise@0.000ns fall@5.000ns period=10.000ns})
+  Destination:            lsu_vhd/DMEM_0/U0/inst_blk_mem_gen/gnbram.gnativebmg.native_blk_mem_gen/valid.cstr/ramloop[0].ram.r/prim_init.ram/DEVICE_7SERIES.NO_BMM_INFO.SDP.SIMPLE_PRIM36.ram/ADDRBWRADDR[10]
+                            (rising edge-triggered cell RAMB36E1 clocked by clk_1  {rise@0.000ns fall@5.000ns period=10.000ns})
+  Path Group:             clk_1
+  Path Type:              Hold (Min at Fast Process Corner)
+  Requirement:            0.000ns  (clk_1 rise@0.000ns - clk_1 rise@0.000ns)
+  Data Path Delay:        0.427ns  (logic 0.100ns (23.404%)  route 0.327ns (76.596%))
+  Logic Levels:           0  
+  Clock Path Skew:        0.100ns (DCD - SCD - CPR)
+    Destination Clock Delay (DCD):    2.485ns
+    Source Clock Delay      (SCD):    1.957ns
+    Clock Pessimism Removal (CPR):    0.429ns
+
+    Location             Delay type                Incr(ns)  Path(ns)    Netlist Resource(s)
+  -------------------------------------------------------------------    -------------------
+                         (clock clk_1 rise edge)      0.000     0.000 r  
+    AL31                                              0.000     0.000 r  clk (IN)
+                         net (fo=0)                   0.000     0.000    clk
+    AL31                 IBUF (Prop_ibuf_I_O)         0.165     0.165 r  clk_IBUF_inst/O
+                         net (fo=1, routed)           1.087     1.252    clk_IBUF
+    BUFGCTRL_X0Y0        BUFG (Prop_bufg_I_O)         0.026     1.278 r  clk_IBUF_BUFG_inst/O
+                         net (fo=28, routed)          0.679     1.957    lsu_vhd/clk
+    SLICE_X45Y128        FDCE                                         r  lsu_vhd/ADDER_OUT_reg[8]/C
+  -------------------------------------------------------------------    -------------------
+    SLICE_X45Y128        FDCE (Prop_fdce_C_Q)         0.100     2.057 r  lsu_vhd/ADDER_OUT_reg[8]/Q
+                         net (fo=5, routed)           0.327     2.384    lsu_vhd/DMEM_0/U0/inst_blk_mem_gen/gnbram.gnativebmg.native_blk_mem_gen/valid.cstr/ramloop[0].ram.r/prim_init.ram/addrb[6]
+    RAMB36_X3Y26         RAMB36E1                                     r  lsu_vhd/DMEM_0/U0/inst_blk_mem_gen/gnbram.gnativebmg.native_blk_mem_gen/valid.cstr/ramloop[0].ram.r/prim_init.ram/DEVICE_7SERIES.NO_BMM_INFO.SDP.SIMPLE_PRIM36.ram/ADDRBWRADDR[10]
+  -------------------------------------------------------------------    -------------------
+
+                         (clock clk_1 rise edge)      0.000     0.000 r  
+    AL31                                              0.000     0.000 r  clk (IN)
+                         net (fo=0)                   0.000     0.000    clk
+    AL31                 IBUF (Prop_ibuf_I_O)         0.332     0.332 r  clk_IBUF_inst/O
+                         net (fo=1, routed)           1.157     1.489    clk_IBUF
+    BUFGCTRL_X0Y0        BUFG (Prop_bufg_I_O)         0.030     1.519 r  clk_IBUF_BUFG_inst/O
+                         net (fo=28, routed)          0.967     2.485    lsu_vhd/DMEM_0/U0/inst_blk_mem_gen/gnbram.gnativebmg.native_blk_mem_gen/valid.cstr/ramloop[0].ram.r/prim_init.ram/clka
+    RAMB36_X3Y26         RAMB36E1                                     r  lsu_vhd/DMEM_0/U0/inst_blk_mem_gen/gnbram.gnativebmg.native_blk_mem_gen/valid.cstr/ramloop[0].ram.r/prim_init.ram/DEVICE_7SERIES.NO_BMM_INFO.SDP.SIMPLE_PRIM36.ram/CLKBWRCLK
+                         clock pessimism             -0.429     2.057    
+    RAMB36_X3Y26         RAMB36E1 (Hold_ramb36e1_CLKBWRCLK_ADDRBWRADDR[10])
+                                                      0.183     2.240    lsu_vhd/DMEM_0/U0/inst_blk_mem_gen/gnbram.gnativebmg.native_blk_mem_gen/valid.cstr/ramloop[0].ram.r/prim_init.ram/DEVICE_7SERIES.NO_BMM_INFO.SDP.SIMPLE_PRIM36.ram
+  -------------------------------------------------------------------
+                         required time                         -2.240    
+                         arrival time                           2.384    
+  -------------------------------------------------------------------
+                         slack                                  0.145    
+
+Slack (MET) :             0.145ns  (arrival time - required time)
+  Source:                 lsu_vhd/OE_reg/C
+                            (rising edge-triggered cell FDCE clocked by clk_1  {rise@0.000ns fall@5.000ns period=10.000ns})
+  Destination:            lsu_vhd/DMEM_0/U0/inst_blk_mem_gen/gnbram.gnativebmg.native_blk_mem_gen/valid.cstr/ramloop[0].ram.r/prim_init.ram/DEVICE_7SERIES.NO_BMM_INFO.SDP.SIMPLE_PRIM36.ram/ENBWREN
+                            (rising edge-triggered cell RAMB36E1 clocked by clk_1  {rise@0.000ns fall@5.000ns period=10.000ns})
+  Path Group:             clk_1
+  Path Type:              Hold (Min at Fast Process Corner)
+  Requirement:            0.000ns  (clk_1 rise@0.000ns - clk_1 rise@0.000ns)
+  Data Path Delay:        0.336ns  (logic 0.118ns (35.140%)  route 0.218ns (64.860%))
+  Logic Levels:           0  
+  Clock Path Skew:        0.095ns (DCD - SCD - CPR)
+    Destination Clock Delay (DCD):    2.485ns
+    Source Clock Delay      (SCD):    1.962ns
+    Clock Pessimism Removal (CPR):    0.429ns
+
+    Location             Delay type                Incr(ns)  Path(ns)    Netlist Resource(s)
+  -------------------------------------------------------------------    -------------------
+                         (clock clk_1 rise edge)      0.000     0.000 r  
+    AL31                                              0.000     0.000 r  clk (IN)
+                         net (fo=0)                   0.000     0.000    clk
+    AL31                 IBUF (Prop_ibuf_I_O)         0.165     0.165 r  clk_IBUF_inst/O
+                         net (fo=1, routed)           1.087     1.252    clk_IBUF
+    BUFGCTRL_X0Y0        BUFG (Prop_bufg_I_O)         0.026     1.278 r  clk_IBUF_BUFG_inst/O
+                         net (fo=28, routed)          0.684     1.962    lsu_vhd/clk
+    SLICE_X46Y133        FDCE                                         r  lsu_vhd/OE_reg/C
+  -------------------------------------------------------------------    -------------------
+    SLICE_X46Y133        FDCE (Prop_fdce_C_Q)         0.118     2.080 r  lsu_vhd/OE_reg/Q
+                         net (fo=2, routed)           0.218     2.298    lsu_vhd/DMEM_0/U0/inst_blk_mem_gen/gnbram.gnativebmg.native_blk_mem_gen/valid.cstr/ramloop[0].ram.r/prim_init.ram/enb
+    RAMB36_X3Y26         RAMB36E1                                     r  lsu_vhd/DMEM_0/U0/inst_blk_mem_gen/gnbram.gnativebmg.native_blk_mem_gen/valid.cstr/ramloop[0].ram.r/prim_init.ram/DEVICE_7SERIES.NO_BMM_INFO.SDP.SIMPLE_PRIM36.ram/ENBWREN
+  -------------------------------------------------------------------    -------------------
+
+                         (clock clk_1 rise edge)      0.000     0.000 r  
+    AL31                                              0.000     0.000 r  clk (IN)
+                         net (fo=0)                   0.000     0.000    clk
+    AL31                 IBUF (Prop_ibuf_I_O)         0.332     0.332 r  clk_IBUF_inst/O
+                         net (fo=1, routed)           1.157     1.489    clk_IBUF
+    BUFGCTRL_X0Y0        BUFG (Prop_bufg_I_O)         0.030     1.519 r  clk_IBUF_BUFG_inst/O
+                         net (fo=28, routed)          0.967     2.485    lsu_vhd/DMEM_0/U0/inst_blk_mem_gen/gnbram.gnativebmg.native_blk_mem_gen/valid.cstr/ramloop[0].ram.r/prim_init.ram/clka
+    RAMB36_X3Y26         RAMB36E1                                     r  lsu_vhd/DMEM_0/U0/inst_blk_mem_gen/gnbram.gnativebmg.native_blk_mem_gen/valid.cstr/ramloop[0].ram.r/prim_init.ram/DEVICE_7SERIES.NO_BMM_INFO.SDP.SIMPLE_PRIM36.ram/CLKBWRCLK
+                         clock pessimism             -0.429     2.057    
+    RAMB36_X3Y26         RAMB36E1 (Hold_ramb36e1_CLKBWRCLK_ENBWREN)
+                                                      0.096     2.153    lsu_vhd/DMEM_0/U0/inst_blk_mem_gen/gnbram.gnativebmg.native_blk_mem_gen/valid.cstr/ramloop[0].ram.r/prim_init.ram/DEVICE_7SERIES.NO_BMM_INFO.SDP.SIMPLE_PRIM36.ram
+  -------------------------------------------------------------------
+                         required time                         -2.153    
+                         arrival time                           2.298    
+  -------------------------------------------------------------------
+                         slack                                  0.145    
+
+Slack (MET) :             0.146ns  (arrival time - required time)
+  Source:                 lsu_vhd/ADDER_OUT_reg[12]/C
+                            (rising edge-triggered cell FDCE clocked by clk_1  {rise@0.000ns fall@5.000ns period=10.000ns})
+  Destination:            lsu_vhd/DMEM_0/U0/inst_blk_mem_gen/gnbram.gnativebmg.native_blk_mem_gen/valid.cstr/ramloop[0].ram.r/prim_init.ram/DEVICE_7SERIES.NO_BMM_INFO.SDP.SIMPLE_PRIM36.ram/ADDRBWRADDR[14]
+                            (rising edge-triggered cell RAMB36E1 clocked by clk_1  {rise@0.000ns fall@5.000ns period=10.000ns})
+  Path Group:             clk_1
+  Path Type:              Hold (Min at Fast Process Corner)
+  Requirement:            0.000ns  (clk_1 rise@0.000ns - clk_1 rise@0.000ns)
+  Data Path Delay:        0.427ns  (logic 0.100ns (23.415%)  route 0.327ns (76.585%))
+  Logic Levels:           0  
+  Clock Path Skew:        0.099ns (DCD - SCD - CPR)
+    Destination Clock Delay (DCD):    2.485ns
+    Source Clock Delay      (SCD):    1.958ns
+    Clock Pessimism Removal (CPR):    0.429ns
+
+    Location             Delay type                Incr(ns)  Path(ns)    Netlist Resource(s)
+  -------------------------------------------------------------------    -------------------
+                         (clock clk_1 rise edge)      0.000     0.000 r  
+    AL31                                              0.000     0.000 r  clk (IN)
+                         net (fo=0)                   0.000     0.000    clk
+    AL31                 IBUF (Prop_ibuf_I_O)         0.165     0.165 r  clk_IBUF_inst/O
+                         net (fo=1, routed)           1.087     1.252    clk_IBUF
+    BUFGCTRL_X0Y0        BUFG (Prop_bufg_I_O)         0.026     1.278 r  clk_IBUF_BUFG_inst/O
+                         net (fo=28, routed)          0.680     1.958    lsu_vhd/clk
+    SLICE_X45Y129        FDCE                                         r  lsu_vhd/ADDER_OUT_reg[12]/C
+  -------------------------------------------------------------------    -------------------
+    SLICE_X45Y129        FDCE (Prop_fdce_C_Q)         0.100     2.058 r  lsu_vhd/ADDER_OUT_reg[12]/Q
+                         net (fo=5, routed)           0.327     2.385    lsu_vhd/DMEM_0/U0/inst_blk_mem_gen/gnbram.gnativebmg.native_blk_mem_gen/valid.cstr/ramloop[0].ram.r/prim_init.ram/addrb[10]
+    RAMB36_X3Y26         RAMB36E1                                     r  lsu_vhd/DMEM_0/U0/inst_blk_mem_gen/gnbram.gnativebmg.native_blk_mem_gen/valid.cstr/ramloop[0].ram.r/prim_init.ram/DEVICE_7SERIES.NO_BMM_INFO.SDP.SIMPLE_PRIM36.ram/ADDRBWRADDR[14]
+  -------------------------------------------------------------------    -------------------
+
+                         (clock clk_1 rise edge)      0.000     0.000 r  
+    AL31                                              0.000     0.000 r  clk (IN)
+                         net (fo=0)                   0.000     0.000    clk
+    AL31                 IBUF (Prop_ibuf_I_O)         0.332     0.332 r  clk_IBUF_inst/O
+                         net (fo=1, routed)           1.157     1.489    clk_IBUF
+    BUFGCTRL_X0Y0        BUFG (Prop_bufg_I_O)         0.030     1.519 r  clk_IBUF_BUFG_inst/O
+                         net (fo=28, routed)          0.967     2.485    lsu_vhd/DMEM_0/U0/inst_blk_mem_gen/gnbram.gnativebmg.native_blk_mem_gen/valid.cstr/ramloop[0].ram.r/prim_init.ram/clka
+    RAMB36_X3Y26         RAMB36E1                                     r  lsu_vhd/DMEM_0/U0/inst_blk_mem_gen/gnbram.gnativebmg.native_blk_mem_gen/valid.cstr/ramloop[0].ram.r/prim_init.ram/DEVICE_7SERIES.NO_BMM_INFO.SDP.SIMPLE_PRIM36.ram/CLKBWRCLK
+                         clock pessimism             -0.429     2.057    
+    RAMB36_X3Y26         RAMB36E1 (Hold_ramb36e1_CLKBWRCLK_ADDRBWRADDR[14])
+                                                      0.183     2.240    lsu_vhd/DMEM_0/U0/inst_blk_mem_gen/gnbram.gnativebmg.native_blk_mem_gen/valid.cstr/ramloop[0].ram.r/prim_init.ram/DEVICE_7SERIES.NO_BMM_INFO.SDP.SIMPLE_PRIM36.ram
+  -------------------------------------------------------------------
+                         required time                         -2.240    
+                         arrival time                           2.385    
+  -------------------------------------------------------------------
+                         slack                                  0.146    
+
+Slack (MET) :             0.161ns  (arrival time - required time)
+  Source:                 lsu_vhd/ADDER_OUT_reg[9]/C
+                            (rising edge-triggered cell FDCE clocked by clk_1  {rise@0.000ns fall@5.000ns period=10.000ns})
+  Destination:            lsu_vhd/DMEM_0/U0/inst_blk_mem_gen/gnbram.gnativebmg.native_blk_mem_gen/valid.cstr/ramloop[0].ram.r/prim_init.ram/DEVICE_7SERIES.NO_BMM_INFO.SDP.SIMPLE_PRIM36.ram/ADDRARDADDR[11]
+                            (rising edge-triggered cell RAMB36E1 clocked by clk_1  {rise@0.000ns fall@5.000ns period=10.000ns})
+  Path Group:             clk_1
+  Path Type:              Hold (Min at Fast Process Corner)
+  Requirement:            0.000ns  (clk_1 rise@0.000ns - clk_1 rise@0.000ns)
+  Data Path Delay:        0.445ns  (logic 0.100ns (22.465%)  route 0.345ns (77.535%))
+  Logic Levels:           0  
+  Clock Path Skew:        0.102ns (DCD - SCD - CPR)
+    Destination Clock Delay (DCD):    2.487ns
+    Source Clock Delay      (SCD):    1.957ns
+    Clock Pessimism Removal (CPR):    0.429ns
+
+    Location             Delay type                Incr(ns)  Path(ns)    Netlist Resource(s)
+  -------------------------------------------------------------------    -------------------
+                         (clock clk_1 rise edge)      0.000     0.000 r  
+    AL31                                              0.000     0.000 r  clk (IN)
+                         net (fo=0)                   0.000     0.000    clk
+    AL31                 IBUF (Prop_ibuf_I_O)         0.165     0.165 r  clk_IBUF_inst/O
+                         net (fo=1, routed)           1.087     1.252    clk_IBUF
+    BUFGCTRL_X0Y0        BUFG (Prop_bufg_I_O)         0.026     1.278 r  clk_IBUF_BUFG_inst/O
+                         net (fo=28, routed)          0.679     1.957    lsu_vhd/clk
+    SLICE_X45Y128        FDCE                                         r  lsu_vhd/ADDER_OUT_reg[9]/C
+  -------------------------------------------------------------------    -------------------
+    SLICE_X45Y128        FDCE (Prop_fdce_C_Q)         0.100     2.057 r  lsu_vhd/ADDER_OUT_reg[9]/Q
+                         net (fo=5, routed)           0.345     2.402    lsu_vhd/DMEM_0/U0/inst_blk_mem_gen/gnbram.gnativebmg.native_blk_mem_gen/valid.cstr/ramloop[0].ram.r/prim_init.ram/addra[7]
+    RAMB36_X3Y26         RAMB36E1                                     r  lsu_vhd/DMEM_0/U0/inst_blk_mem_gen/gnbram.gnativebmg.native_blk_mem_gen/valid.cstr/ramloop[0].ram.r/prim_init.ram/DEVICE_7SERIES.NO_BMM_INFO.SDP.SIMPLE_PRIM36.ram/ADDRARDADDR[11]
+  -------------------------------------------------------------------    -------------------
+
+                         (clock clk_1 rise edge)      0.000     0.000 r  
+    AL31                                              0.000     0.000 r  clk (IN)
+                         net (fo=0)                   0.000     0.000    clk
+    AL31                 IBUF (Prop_ibuf_I_O)         0.332     0.332 r  clk_IBUF_inst/O
+                         net (fo=1, routed)           1.157     1.489    clk_IBUF
+    BUFGCTRL_X0Y0        BUFG (Prop_bufg_I_O)         0.030     1.519 r  clk_IBUF_BUFG_inst/O
+                         net (fo=28, routed)          0.969     2.487    lsu_vhd/DMEM_0/U0/inst_blk_mem_gen/gnbram.gnativebmg.native_blk_mem_gen/valid.cstr/ramloop[0].ram.r/prim_init.ram/clka
+    RAMB36_X3Y26         RAMB36E1                                     r  lsu_vhd/DMEM_0/U0/inst_blk_mem_gen/gnbram.gnativebmg.native_blk_mem_gen/valid.cstr/ramloop[0].ram.r/prim_init.ram/DEVICE_7SERIES.NO_BMM_INFO.SDP.SIMPLE_PRIM36.ram/CLKARDCLK
+                         clock pessimism             -0.429     2.059    
+    RAMB36_X3Y26         RAMB36E1 (Hold_ramb36e1_CLKARDCLK_ADDRARDADDR[11])
+                                                      0.183     2.242    lsu_vhd/DMEM_0/U0/inst_blk_mem_gen/gnbram.gnativebmg.native_blk_mem_gen/valid.cstr/ramloop[0].ram.r/prim_init.ram/DEVICE_7SERIES.NO_BMM_INFO.SDP.SIMPLE_PRIM36.ram
+  -------------------------------------------------------------------
+                         required time                         -2.242    
+                         arrival time                           2.402    
+  -------------------------------------------------------------------
+                         slack                                  0.161    
+
+Slack (MET) :             0.162ns  (arrival time - required time)
+  Source:                 lsu_vhd/ADDER_OUT_reg[2]/C
+                            (rising edge-triggered cell FDCE clocked by clk_1  {rise@0.000ns fall@5.000ns period=10.000ns})
+  Destination:            lsu_vhd/DMEM_0/U0/inst_blk_mem_gen/gnbram.gnativebmg.native_blk_mem_gen/valid.cstr/ramloop[0].ram.r/prim_init.ram/DEVICE_7SERIES.NO_BMM_INFO.SDP.SIMPLE_PRIM36.ram/ADDRARDADDR[4]
+                            (rising edge-triggered cell RAMB36E1 clocked by clk_1  {rise@0.000ns fall@5.000ns period=10.000ns})
+  Path Group:             clk_1
+  Path Type:              Hold (Min at Fast Process Corner)
+  Requirement:            0.000ns  (clk_1 rise@0.000ns - clk_1 rise@0.000ns)
+  Data Path Delay:        0.448ns  (logic 0.100ns (22.314%)  route 0.348ns (77.686%))
+  Logic Levels:           0  
+  Clock Path Skew:        0.104ns (DCD - SCD - CPR)
+    Destination Clock Delay (DCD):    2.487ns
+    Source Clock Delay      (SCD):    1.955ns
+    Clock Pessimism Removal (CPR):    0.429ns
+
+    Location             Delay type                Incr(ns)  Path(ns)    Netlist Resource(s)
+  -------------------------------------------------------------------    -------------------
+                         (clock clk_1 rise edge)      0.000     0.000 r  
+    AL31                                              0.000     0.000 r  clk (IN)
+                         net (fo=0)                   0.000     0.000    clk
+    AL31                 IBUF (Prop_ibuf_I_O)         0.165     0.165 r  clk_IBUF_inst/O
+                         net (fo=1, routed)           1.087     1.252    clk_IBUF
+    BUFGCTRL_X0Y0        BUFG (Prop_bufg_I_O)         0.026     1.278 r  clk_IBUF_BUFG_inst/O
+                         net (fo=28, routed)          0.677     1.955    lsu_vhd/clk
+    SLICE_X45Y126        FDCE                                         r  lsu_vhd/ADDER_OUT_reg[2]/C
+  -------------------------------------------------------------------    -------------------
+    SLICE_X45Y126        FDCE (Prop_fdce_C_Q)         0.100     2.055 r  lsu_vhd/ADDER_OUT_reg[2]/Q
+                         net (fo=5, routed)           0.348     2.403    lsu_vhd/DMEM_0/U0/inst_blk_mem_gen/gnbram.gnativebmg.native_blk_mem_gen/valid.cstr/ramloop[0].ram.r/prim_init.ram/addra[0]
+    RAMB36_X3Y26         RAMB36E1                                     r  lsu_vhd/DMEM_0/U0/inst_blk_mem_gen/gnbram.gnativebmg.native_blk_mem_gen/valid.cstr/ramloop[0].ram.r/prim_init.ram/DEVICE_7SERIES.NO_BMM_INFO.SDP.SIMPLE_PRIM36.ram/ADDRARDADDR[4]
+  -------------------------------------------------------------------    -------------------
+
+                         (clock clk_1 rise edge)      0.000     0.000 r  
+    AL31                                              0.000     0.000 r  clk (IN)
+                         net (fo=0)                   0.000     0.000    clk
+    AL31                 IBUF (Prop_ibuf_I_O)         0.332     0.332 r  clk_IBUF_inst/O
+                         net (fo=1, routed)           1.157     1.489    clk_IBUF
+    BUFGCTRL_X0Y0        BUFG (Prop_bufg_I_O)         0.030     1.519 r  clk_IBUF_BUFG_inst/O
+                         net (fo=28, routed)          0.969     2.487    lsu_vhd/DMEM_0/U0/inst_blk_mem_gen/gnbram.gnativebmg.native_blk_mem_gen/valid.cstr/ramloop[0].ram.r/prim_init.ram/clka
+    RAMB36_X3Y26         RAMB36E1                                     r  lsu_vhd/DMEM_0/U0/inst_blk_mem_gen/gnbram.gnativebmg.native_blk_mem_gen/valid.cstr/ramloop[0].ram.r/prim_init.ram/DEVICE_7SERIES.NO_BMM_INFO.SDP.SIMPLE_PRIM36.ram/CLKARDCLK
+                         clock pessimism             -0.429     2.059    
+    RAMB36_X3Y26         RAMB36E1 (Hold_ramb36e1_CLKARDCLK_ADDRARDADDR[4])
+                                                      0.183     2.242    lsu_vhd/DMEM_0/U0/inst_blk_mem_gen/gnbram.gnativebmg.native_blk_mem_gen/valid.cstr/ramloop[0].ram.r/prim_init.ram/DEVICE_7SERIES.NO_BMM_INFO.SDP.SIMPLE_PRIM36.ram
+  -------------------------------------------------------------------
+                         required time                         -2.242    
+                         arrival time                           2.403    
+  -------------------------------------------------------------------
+                         slack                                  0.162    
+
+Slack (MET) :             0.162ns  (arrival time - required time)
+  Source:                 lsu_vhd/ADDER_OUT_reg[5]/C
+                            (rising edge-triggered cell FDCE clocked by clk_1  {rise@0.000ns fall@5.000ns period=10.000ns})
+  Destination:            lsu_vhd/DMEM_0/U0/inst_blk_mem_gen/gnbram.gnativebmg.native_blk_mem_gen/valid.cstr/ramloop[0].ram.r/prim_init.ram/DEVICE_7SERIES.NO_BMM_INFO.SDP.SIMPLE_PRIM36.ram/ADDRARDADDR[7]
+                            (rising edge-triggered cell RAMB36E1 clocked by clk_1  {rise@0.000ns fall@5.000ns period=10.000ns})
+  Path Group:             clk_1
+  Path Type:              Hold (Min at Fast Process Corner)
+  Requirement:            0.000ns  (clk_1 rise@0.000ns - clk_1 rise@0.000ns)
+  Data Path Delay:        0.448ns  (logic 0.100ns (22.323%)  route 0.348ns (77.677%))
+  Logic Levels:           0  
+  Clock Path Skew:        0.103ns (DCD - SCD - CPR)
+    Destination Clock Delay (DCD):    2.487ns
+    Source Clock Delay      (SCD):    1.956ns
+    Clock Pessimism Removal (CPR):    0.429ns
+
+    Location             Delay type                Incr(ns)  Path(ns)    Netlist Resource(s)
+  -------------------------------------------------------------------    -------------------
+                         (clock clk_1 rise edge)      0.000     0.000 r  
+    AL31                                              0.000     0.000 r  clk (IN)
+                         net (fo=0)                   0.000     0.000    clk
+    AL31                 IBUF (Prop_ibuf_I_O)         0.165     0.165 r  clk_IBUF_inst/O
+                         net (fo=1, routed)           1.087     1.252    clk_IBUF
+    BUFGCTRL_X0Y0        BUFG (Prop_bufg_I_O)         0.026     1.278 r  clk_IBUF_BUFG_inst/O
+                         net (fo=28, routed)          0.678     1.956    lsu_vhd/clk
+    SLICE_X45Y127        FDCE                                         r  lsu_vhd/ADDER_OUT_reg[5]/C
+  -------------------------------------------------------------------    -------------------
+    SLICE_X45Y127        FDCE (Prop_fdce_C_Q)         0.100     2.056 r  lsu_vhd/ADDER_OUT_reg[5]/Q
+                         net (fo=5, routed)           0.348     2.404    lsu_vhd/DMEM_0/U0/inst_blk_mem_gen/gnbram.gnativebmg.native_blk_mem_gen/valid.cstr/ramloop[0].ram.r/prim_init.ram/addra[3]
+    RAMB36_X3Y26         RAMB36E1                                     r  lsu_vhd/DMEM_0/U0/inst_blk_mem_gen/gnbram.gnativebmg.native_blk_mem_gen/valid.cstr/ramloop[0].ram.r/prim_init.ram/DEVICE_7SERIES.NO_BMM_INFO.SDP.SIMPLE_PRIM36.ram/ADDRARDADDR[7]
+  -------------------------------------------------------------------    -------------------
+
+                         (clock clk_1 rise edge)      0.000     0.000 r  
+    AL31                                              0.000     0.000 r  clk (IN)
+                         net (fo=0)                   0.000     0.000    clk
+    AL31                 IBUF (Prop_ibuf_I_O)         0.332     0.332 r  clk_IBUF_inst/O
+                         net (fo=1, routed)           1.157     1.489    clk_IBUF
+    BUFGCTRL_X0Y0        BUFG (Prop_bufg_I_O)         0.030     1.519 r  clk_IBUF_BUFG_inst/O
+                         net (fo=28, routed)          0.969     2.487    lsu_vhd/DMEM_0/U0/inst_blk_mem_gen/gnbram.gnativebmg.native_blk_mem_gen/valid.cstr/ramloop[0].ram.r/prim_init.ram/clka
+    RAMB36_X3Y26         RAMB36E1                                     r  lsu_vhd/DMEM_0/U0/inst_blk_mem_gen/gnbram.gnativebmg.native_blk_mem_gen/valid.cstr/ramloop[0].ram.r/prim_init.ram/DEVICE_7SERIES.NO_BMM_INFO.SDP.SIMPLE_PRIM36.ram/CLKARDCLK
+                         clock pessimism             -0.429     2.059    
+    RAMB36_X3Y26         RAMB36E1 (Hold_ramb36e1_CLKARDCLK_ADDRARDADDR[7])
+                                                      0.183     2.242    lsu_vhd/DMEM_0/U0/inst_blk_mem_gen/gnbram.gnativebmg.native_blk_mem_gen/valid.cstr/ramloop[0].ram.r/prim_init.ram/DEVICE_7SERIES.NO_BMM_INFO.SDP.SIMPLE_PRIM36.ram
+  -------------------------------------------------------------------
+                         required time                         -2.242    
+                         arrival time                           2.404    
+  -------------------------------------------------------------------
+                         slack                                  0.162    
+
+Slack (MET) :             0.163ns  (arrival time - required time)
+  Source:                 lsu_vhd/ADDER_OUT_reg[9]/C
+                            (rising edge-triggered cell FDCE clocked by clk_1  {rise@0.000ns fall@5.000ns period=10.000ns})
+  Destination:            lsu_vhd/DMEM_0/U0/inst_blk_mem_gen/gnbram.gnativebmg.native_blk_mem_gen/valid.cstr/ramloop[0].ram.r/prim_init.ram/DEVICE_7SERIES.NO_BMM_INFO.SDP.SIMPLE_PRIM36.ram/ADDRBWRADDR[11]
+                            (rising edge-triggered cell RAMB36E1 clocked by clk_1  {rise@0.000ns fall@5.000ns period=10.000ns})
+  Path Group:             clk_1
+  Path Type:              Hold (Min at Fast Process Corner)
+  Requirement:            0.000ns  (clk_1 rise@0.000ns - clk_1 rise@0.000ns)
+  Data Path Delay:        0.445ns  (logic 0.100ns (22.465%)  route 0.345ns (77.535%))
+  Logic Levels:           0  
+  Clock Path Skew:        0.100ns (DCD - SCD - CPR)
+    Destination Clock Delay (DCD):    2.485ns
+    Source Clock Delay      (SCD):    1.957ns
+    Clock Pessimism Removal (CPR):    0.429ns
+
+    Location             Delay type                Incr(ns)  Path(ns)    Netlist Resource(s)
+  -------------------------------------------------------------------    -------------------
+                         (clock clk_1 rise edge)      0.000     0.000 r  
+    AL31                                              0.000     0.000 r  clk (IN)
+                         net (fo=0)                   0.000     0.000    clk
+    AL31                 IBUF (Prop_ibuf_I_O)         0.165     0.165 r  clk_IBUF_inst/O
+                         net (fo=1, routed)           1.087     1.252    clk_IBUF
+    BUFGCTRL_X0Y0        BUFG (Prop_bufg_I_O)         0.026     1.278 r  clk_IBUF_BUFG_inst/O
+                         net (fo=28, routed)          0.679     1.957    lsu_vhd/clk
+    SLICE_X45Y128        FDCE                                         r  lsu_vhd/ADDER_OUT_reg[9]/C
+  -------------------------------------------------------------------    -------------------
+    SLICE_X45Y128        FDCE (Prop_fdce_C_Q)         0.100     2.057 r  lsu_vhd/ADDER_OUT_reg[9]/Q
+                         net (fo=5, routed)           0.345     2.402    lsu_vhd/DMEM_0/U0/inst_blk_mem_gen/gnbram.gnativebmg.native_blk_mem_gen/valid.cstr/ramloop[0].ram.r/prim_init.ram/addrb[7]
+    RAMB36_X3Y26         RAMB36E1                                     r  lsu_vhd/DMEM_0/U0/inst_blk_mem_gen/gnbram.gnativebmg.native_blk_mem_gen/valid.cstr/ramloop[0].ram.r/prim_init.ram/DEVICE_7SERIES.NO_BMM_INFO.SDP.SIMPLE_PRIM36.ram/ADDRBWRADDR[11]
+  -------------------------------------------------------------------    -------------------
+
+                         (clock clk_1 rise edge)      0.000     0.000 r  
+    AL31                                              0.000     0.000 r  clk (IN)
+                         net (fo=0)                   0.000     0.000    clk
+    AL31                 IBUF (Prop_ibuf_I_O)         0.332     0.332 r  clk_IBUF_inst/O
+                         net (fo=1, routed)           1.157     1.489    clk_IBUF
+    BUFGCTRL_X0Y0        BUFG (Prop_bufg_I_O)         0.030     1.519 r  clk_IBUF_BUFG_inst/O
+                         net (fo=28, routed)          0.967     2.485    lsu_vhd/DMEM_0/U0/inst_blk_mem_gen/gnbram.gnativebmg.native_blk_mem_gen/valid.cstr/ramloop[0].ram.r/prim_init.ram/clka
+    RAMB36_X3Y26         RAMB36E1                                     r  lsu_vhd/DMEM_0/U0/inst_blk_mem_gen/gnbram.gnativebmg.native_blk_mem_gen/valid.cstr/ramloop[0].ram.r/prim_init.ram/DEVICE_7SERIES.NO_BMM_INFO.SDP.SIMPLE_PRIM36.ram/CLKBWRCLK
+                         clock pessimism             -0.429     2.057    
+    RAMB36_X3Y26         RAMB36E1 (Hold_ramb36e1_CLKBWRCLK_ADDRBWRADDR[11])
+                                                      0.183     2.240    lsu_vhd/DMEM_0/U0/inst_blk_mem_gen/gnbram.gnativebmg.native_blk_mem_gen/valid.cstr/ramloop[0].ram.r/prim_init.ram/DEVICE_7SERIES.NO_BMM_INFO.SDP.SIMPLE_PRIM36.ram
+  -------------------------------------------------------------------
+                         required time                         -2.240    
+                         arrival time                           2.402    
+  -------------------------------------------------------------------
+                         slack                                  0.163    
+
+Slack (MET) :             0.170ns  (arrival time - required time)
+  Source:                 lsu_vhd/ADDER_OUT_reg[6]/C
+                            (rising edge-triggered cell FDCE clocked by clk_1  {rise@0.000ns fall@5.000ns period=10.000ns})
+  Destination:            lsu_vhd/DMEM_0/U0/inst_blk_mem_gen/gnbram.gnativebmg.native_blk_mem_gen/valid.cstr/ramloop[0].ram.r/prim_init.ram/DEVICE_7SERIES.NO_BMM_INFO.SDP.SIMPLE_PRIM36.ram/ADDRARDADDR[8]
+                            (rising edge-triggered cell RAMB36E1 clocked by clk_1  {rise@0.000ns fall@5.000ns period=10.000ns})
+  Path Group:             clk_1
+  Path Type:              Hold (Min at Fast Process Corner)
+  Requirement:            0.000ns  (clk_1 rise@0.000ns - clk_1 rise@0.000ns)
+  Data Path Delay:        0.456ns  (logic 0.100ns (21.952%)  route 0.356ns (78.048%))
+  Logic Levels:           0  
+  Clock Path Skew:        0.103ns (DCD - SCD - CPR)
+    Destination Clock Delay (DCD):    2.487ns
+    Source Clock Delay      (SCD):    1.956ns
+    Clock Pessimism Removal (CPR):    0.429ns
+
+    Location             Delay type                Incr(ns)  Path(ns)    Netlist Resource(s)
+  -------------------------------------------------------------------    -------------------
+                         (clock clk_1 rise edge)      0.000     0.000 r  
+    AL31                                              0.000     0.000 r  clk (IN)
+                         net (fo=0)                   0.000     0.000    clk
+    AL31                 IBUF (Prop_ibuf_I_O)         0.165     0.165 r  clk_IBUF_inst/O
+                         net (fo=1, routed)           1.087     1.252    clk_IBUF
+    BUFGCTRL_X0Y0        BUFG (Prop_bufg_I_O)         0.026     1.278 r  clk_IBUF_BUFG_inst/O
+                         net (fo=28, routed)          0.678     1.956    lsu_vhd/clk
+    SLICE_X45Y127        FDCE                                         r  lsu_vhd/ADDER_OUT_reg[6]/C
+  -------------------------------------------------------------------    -------------------
+    SLICE_X45Y127        FDCE (Prop_fdce_C_Q)         0.100     2.056 r  lsu_vhd/ADDER_OUT_reg[6]/Q
+                         net (fo=5, routed)           0.356     2.412    lsu_vhd/DMEM_0/U0/inst_blk_mem_gen/gnbram.gnativebmg.native_blk_mem_gen/valid.cstr/ramloop[0].ram.r/prim_init.ram/addra[4]
+    RAMB36_X3Y26         RAMB36E1                                     r  lsu_vhd/DMEM_0/U0/inst_blk_mem_gen/gnbram.gnativebmg.native_blk_mem_gen/valid.cstr/ramloop[0].ram.r/prim_init.ram/DEVICE_7SERIES.NO_BMM_INFO.SDP.SIMPLE_PRIM36.ram/ADDRARDADDR[8]
+  -------------------------------------------------------------------    -------------------
+
+                         (clock clk_1 rise edge)      0.000     0.000 r  
+    AL31                                              0.000     0.000 r  clk (IN)
+                         net (fo=0)                   0.000     0.000    clk
+    AL31                 IBUF (Prop_ibuf_I_O)         0.332     0.332 r  clk_IBUF_inst/O
+                         net (fo=1, routed)           1.157     1.489    clk_IBUF
+    BUFGCTRL_X0Y0        BUFG (Prop_bufg_I_O)         0.030     1.519 r  clk_IBUF_BUFG_inst/O
+                         net (fo=28, routed)          0.969     2.487    lsu_vhd/DMEM_0/U0/inst_blk_mem_gen/gnbram.gnativebmg.native_blk_mem_gen/valid.cstr/ramloop[0].ram.r/prim_init.ram/clka
+    RAMB36_X3Y26         RAMB36E1                                     r  lsu_vhd/DMEM_0/U0/inst_blk_mem_gen/gnbram.gnativebmg.native_blk_mem_gen/valid.cstr/ramloop[0].ram.r/prim_init.ram/DEVICE_7SERIES.NO_BMM_INFO.SDP.SIMPLE_PRIM36.ram/CLKARDCLK
+                         clock pessimism             -0.429     2.059    
+    RAMB36_X3Y26         RAMB36E1 (Hold_ramb36e1_CLKARDCLK_ADDRARDADDR[8])
+                                                      0.183     2.242    lsu_vhd/DMEM_0/U0/inst_blk_mem_gen/gnbram.gnativebmg.native_blk_mem_gen/valid.cstr/ramloop[0].ram.r/prim_init.ram/DEVICE_7SERIES.NO_BMM_INFO.SDP.SIMPLE_PRIM36.ram
+  -------------------------------------------------------------------
+                         required time                         -2.242    
+                         arrival time                           2.412    
+  -------------------------------------------------------------------
+                         slack                                  0.170    
+
+
+
+
+
+Pulse Width Checks
+--------------------------------------------------------------------------------------
+Clock Name:         clk_1
+Waveform(ns):       { 0.000 5.000 }
+Period(ns):         10.000
+Sources:            { clk }
+
+Check Type        Corner  Lib Pin             Reference Pin  Required(ns)  Actual(ns)  Slack(ns)  Location       Pin
+Min Period        n/a     RAMB36E1/CLKARDCLK  n/a            2.183         10.000      7.817      RAMB36_X3Y25   lsu_vhd/DMEM_0/U0/inst_blk_mem_gen/gnbram.gnativebmg.native_blk_mem_gen/valid.cstr/ramloop[1].ram.r/prim_init.ram/DEVICE_7SERIES.NO_BMM_INFO.SDP.SIMPLE_PRIM36.ram/CLKARDCLK
+Min Period        n/a     RAMB36E1/CLKBWRCLK  n/a            2.183         10.000      7.817      RAMB36_X3Y25   lsu_vhd/DMEM_0/U0/inst_blk_mem_gen/gnbram.gnativebmg.native_blk_mem_gen/valid.cstr/ramloop[1].ram.r/prim_init.ram/DEVICE_7SERIES.NO_BMM_INFO.SDP.SIMPLE_PRIM36.ram/CLKBWRCLK
+Min Period        n/a     RAMB36E1/CLKARDCLK  n/a            2.183         10.000      7.817      RAMB36_X3Y26   lsu_vhd/DMEM_0/U0/inst_blk_mem_gen/gnbram.gnativebmg.native_blk_mem_gen/valid.cstr/ramloop[0].ram.r/prim_init.ram/DEVICE_7SERIES.NO_BMM_INFO.SDP.SIMPLE_PRIM36.ram/CLKARDCLK
+Min Period        n/a     RAMB36E1/CLKBWRCLK  n/a            2.183         10.000      7.817      RAMB36_X3Y26   lsu_vhd/DMEM_0/U0/inst_blk_mem_gen/gnbram.gnativebmg.native_blk_mem_gen/valid.cstr/ramloop[0].ram.r/prim_init.ram/DEVICE_7SERIES.NO_BMM_INFO.SDP.SIMPLE_PRIM36.ram/CLKBWRCLK
+Min Period        n/a     BUFG/I              n/a            1.600         10.000      8.400      BUFGCTRL_X0Y0  clk_IBUF_BUFG_inst/I
+Min Period        n/a     FDCE/C              n/a            0.700         10.000      9.300      SLICE_X46Y133  lsu_vhd/ENA_reg/C
+Min Period        n/a     FDCE/C              n/a            0.700         10.000      9.300      SLICE_X46Y133  lsu_vhd/OE_reg/C
+Min Period        n/a     FDCE/C              n/a            0.700         10.000      9.300      SLICE_X46Y133  lsu_vhd/WE_reg/C
+Min Period        n/a     FDCE/C              n/a            0.700         10.000      9.300      SLICE_X45Y126  lsu_vhd/ADDER_OUT_reg[0]/C
+Min Period        n/a     FDCE/C              n/a            0.700         10.000      9.300      SLICE_X45Y128  lsu_vhd/ADDER_OUT_reg[10]/C
+Low Pulse Width   Slow    FDCE/C              n/a            0.350         5.000       4.650      SLICE_X45Y129  lsu_vhd/ADDER_OUT_reg[12]/C
+Low Pulse Width   Fast    FDCE/C              n/a            0.350         5.000       4.650      SLICE_X46Y133  lsu_vhd/ENA_reg/C
+Low Pulse Width   Fast    FDCE/C              n/a            0.350         5.000       4.650      SLICE_X46Y133  lsu_vhd/OE_reg/C
+Low Pulse Width   Fast    FDCE/C              n/a            0.350         5.000       4.650      SLICE_X46Y133  lsu_vhd/WE_reg/C
+Low Pulse Width   Fast    FDCE/C              n/a            0.350         5.000       4.650      SLICE_X45Y126  lsu_vhd/ADDER_OUT_reg[0]/C
+Low Pulse Width   Slow    FDCE/C              n/a            0.350         5.000       4.650      SLICE_X45Y128  lsu_vhd/ADDER_OUT_reg[10]/C
+Low Pulse Width   Slow    FDCE/C              n/a            0.350         5.000       4.650      SLICE_X45Y128  lsu_vhd/ADDER_OUT_reg[11]/C
+Low Pulse Width   Fast    FDCE/C              n/a            0.350         5.000       4.650      SLICE_X45Y126  lsu_vhd/ADDER_OUT_reg[1]/C
+Low Pulse Width   Fast    FDCE/C              n/a            0.350         5.000       4.650      SLICE_X45Y126  lsu_vhd/ADDER_OUT_reg[2]/C
+Low Pulse Width   Fast    FDCE/C              n/a            0.350         5.000       4.650      SLICE_X45Y126  lsu_vhd/ADDER_OUT_reg[3]/C
+High Pulse Width  Slow    FDCE/C              n/a            0.350         5.000       4.650      SLICE_X45Y124  lsu_vhd/count_reg[1]/C
+High Pulse Width  Slow    FDCE/C              n/a            0.350         5.000       4.650      SLICE_X44Y124  lsu_vhd/count_reg[2]/C
+High Pulse Width  Slow    FDCE/C              n/a            0.350         5.000       4.650      SLICE_X44Y124  lsu_vhd/count_reg[3]/C
+High Pulse Width  Slow    FDCE/C              n/a            0.350         5.000       4.650      SLICE_X44Y124  lsu_vhd/count_reg[4]/C
+High Pulse Width  Slow    FDCE/C              n/a            0.350         5.000       4.650      SLICE_X46Y133  lsu_vhd/ENA_reg/C
+High Pulse Width  Fast    FDCE/C              n/a            0.350         5.000       4.650      SLICE_X46Y133  lsu_vhd/ENA_reg/C
+High Pulse Width  Slow    FDCE/C              n/a            0.350         5.000       4.650      SLICE_X46Y133  lsu_vhd/OE_reg/C
+High Pulse Width  Fast    FDCE/C              n/a            0.350         5.000       4.650      SLICE_X46Y133  lsu_vhd/OE_reg/C
+High Pulse Width  Slow    FDCE/C              n/a            0.350         5.000       4.650      SLICE_X46Y133  lsu_vhd/WE_reg/C
+High Pulse Width  Fast    FDCE/C              n/a            0.350         5.000       4.650      SLICE_X46Y133  lsu_vhd/WE_reg/C
+
+
+
